@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <!--  Bootstrap CSS -->
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <!-- Banner -->
+        <!-- ====== -->
+        <div id="banner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <h1>Quiniela Judicial</h1>
+                        <p classs="subtitle">
+                            Entendiendo el sistema de asignacion de causas.
+                        </p>
+                    </div><!--/col -->
+                </div><!--/row -->
+            </div><!--/container -->
+        </div><!--/#banner -->
+
+        <section class="container">
+            <div class="slide">
+                <h2>Introduccion</h2>
+                <p>
+                    Descripcion general del proyecto.</br>Sed id lacus eu urna ullamcorper mattis. Etiam ut nunc erat.
+                    Sed et velit a\ c nisi mattis mollis tempus id nulla. In varius
+                    fermentum posuere. Vivamus \ suscipit accumsan arcu ac ullamcorper.
+                    Aliquam adipiscing, ante non eleifen\ d blandit, nunc diam
+                    vulputate augue, eu convallis lorem lacus in lacus. Cu\ rabitur
+                    ultricies ultrices diam, vel tincidunt dui rhoncus a. Vivamus
+                    at sa\ pien in turpis consequat pharetra sit amet quis elit.
+                </p>
+                <p>
+                    Nam vel justo ut nisl rutrum lobortis.
+                    Donec at arcu nisi, quis euismod enim. Donec viverra felis vitae
+                    elit ornar\ e porta. Vivamus ullamcorper consectetur odio,
+                    vitae imperdiet mi laoreet v\ itae. Fusce ante ligula, cursus
+                    eget volutpat vel, pretium eget tellus.
+                </p>
+            </div><!--/box -->
+
+            <div id="infographic">
+                <div class="row">
+                    <div class="col-4">
+                        <div id="steps">
+                            <!-- Slide 0 -->
+                            <div class="step slide">
+                                <h2>Sorteando Causas</h2>
+                                <p>
+                                    Donec at arcu nisi, quis euismod enim. Donec viverra
+                                    felis vitae elit ornar\ e porta. Vivamus ullamcorper
+                                    consectetur odio, vitae imperdiet mi laoreet v\ itae.
+                                    Fusce ante ligula, cursus eget volutpat vel, pretium
+                                    eget tellus.
+                                </p>
+                            </div><!--/step -->
+
+                            <!-- Slide 1 -->
+                            <div class="step slide">
+                                <h2>Diferencia entre los juzgados</h2>
+                                <p>
+                                    Donec at arcu nisi, quis euismod enim. Donec viverra
+                                    felis vitae elit ornar\ e porta. Vivamus ullamcorper
+                                    consectetur odio, vitae imperdiet mi laoreet v\ itae.
+                                    Fusce ante ligula, cursus eget volutpat vel, pretium
+                                    eget tellus.
+                                </p>
+                            </div><!--/step -->
+
+                            <!-- Slide 2 -->
+                            <div class="step slide">
+                                <h2>Causas de corrupcion</h2>
+                                <p>
+                                    Donec at arcu nisi, quis euismod enim. Donec viverra
+                                    felis vitae elit ornar\ e porta. Vivamus ullamcorper
+                                    consectetur odio, vitae imperdiet mi laoreet v\ itae.
+                                    Fusce ante ligula, cursus eget volutpat vel, pretium
+                                    eget tellus.
+                                </p>
+                            </div><!--/step -->
+
+                            <!-- Slide 3 -->
+                            <div class="step slide">
+                                <h2>Caripelas</h2>
+                                <p>
+                                    Donec at arcu nisi, quis euismod enim. Donec viverra
+                                    felis vitae elit ornar\ e porta. Vivamus ullamcorper
+                                    consectetur odio, vitae imperdiet mi laoreet v\ itae.
+                                    Fusce ante ligula, cursus eget volutpat vel, pretium
+                                    eget tellus.
+                                </p>
+                            </div><!--/step -->
+
+                            <!-- Slide 4 -->
+                            <div class="step slide">
+                                <h2>Con filtro</h2>
+                                <p>
+                                    Donec at arcu nisi, quis euismod enim. Donec viverra
+                                    felis vitae elit ornar\ e porta. Vivamus ullamcorper
+                                    consectetur odio, vitae imperdiet mi laoreet v\ itae.
+                                    Fusce ante ligula, cursus eget volutpat vel, pretium
+                                    eget tellus.
+                                </p>
+                            </div><!--/step -->
+
+                        </div><!--/#steps -->
+                    </div><!--/col -->
+
+                    <!-- Graph -->
+                    <div class="col-8" id="graph-col">
+                        <div id="graph"></div>
+                    </div><!--/col -->
+                </div><!--/row -->
+            </div><!--/#infographic -->
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <h2>Footer</h2>
+                </div><!--/row -->
+            </div><!--/container -->
+        </footer>
+
+        <!-- JS script -->
+        <!-- ========= -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="js/d3-tip.js"></script>
+        <script src="js/graph-scroll.js"></script>
+        <script src="js/plot.js"></script>
+
+        <script>
+        // Create the plot
+        updateBarPlot(dataGeneral)
+
+        d3.graphScroll()
+            .offset(300)
+            .graph(d3.selectAll('#graph'))
+            .container(d3.select('#infographic'))
+            .sections(d3.selectAll('#steps > .step'))
+                .on('active', function( i ){
+                    if (i == 0) {
+                        updateBarPlot(dataGeneral)
+                    }
+                    if (i == 1) {
+                        updateLines(dataGeneral)
+                    }
+                    if (i == 2) {
+                        removeLine()
+                        updateBarPlot(dataCorruption)
+                    }
+                    console.log(i + 'th section active')
+                })
+        </script>
+    </body>
+</html>

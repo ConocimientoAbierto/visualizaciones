@@ -1,0 +1,128 @@
+/* General style */
+li{
+	list-style: none;
+}
+
+.visually-hidden {
+	visibility: hidden;
+}
+
+/* Main text */
+.portada {
+    color: white;
+    background: #00b3ef;
+    background: -moz-linear-gradient(left, #00b3ef 0%, #0076bf 50%, #8bc540 100%);
+    background: -webkit-linear-gradient(left, #00b3ef 0%,#0076bf 50%,#8bc540 100%);
+    background: linear-gradient(to right, #00b3ef 0%,#0076bf 50%,#8bc540 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.portada h1 {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+}
+
+/* Map */
+#mapid {
+	height: 180px;
+	height: 700px;
+	margin-top: 60px;
+}
+
+.info{
+	padding: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: 5px 5px 5px 5px #111;
+    background: #E6ECF0;
+}
+
+.info > li > img {
+    margin-right: 10px;
+    height: 30px;
+	width: 30px;
+}
+
+/* Sequence */
+#sidebar {
+  float: right;
+  width: 100px;
+}
+
+#sequence {
+  width: 100%;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+#chart {
+  position: relative;
+}
+
+#chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  text-align: center;
+  position: absolute;
+  color: #666;
+}
+
+@media (min-width: 576px) {
+    #percentage {
+		font-size: 0.6em;
+    }
+
+	#mapid {
+		height: 500px;
+	}
+}
+
+@media (min-width: 768px) {
+    #percentage {
+		font-size: 1em;
+    }
+
+	#mapid {
+		height: 600px;
+	}
+}
+
+@media (min-width: 992px) {
+    #percentage {
+		font-size: 1.3em;
+    }
+
+	#mapid {
+		height: 700px;
+	}
+}
+
+
+
+#myinput {
+  min-width: 320px;
+}
+
+
+footer p{
+	font-size: 1em;
+	text-align: center;
+	padding: 10px;
+}
+
+footer{
+	background-color: #e6ecf0;
+	padding-bottom: 30px;
+}

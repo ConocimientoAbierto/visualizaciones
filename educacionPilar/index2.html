@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+
+
+	<title>Educación en Pilar</title>
+</head>
+<body>
+
+	<section class="portada">
+		<article class="info">
+			<h1>Educación en Pilar</h1>
+
+				<div class="texto">	
+				<p> El distrito de Pilar cuenta con una diversa oferta educativa a nivel universitario y terciario. Actualmente, existen <strong> 18 institutos de educación superior, </strong> de los cuales <strong>8 son de carácter público y 10 de carácter privado.</strong></p>
+				
+				<p> <strong>Grado.</strong> En Pilar funcionan <strong>8 sedes universitarias de instituciones privadas y públicas (incluido el CBC) </strong> que ofrecen carreras de grado de áreas diversas como Sociales, Salud, Económicas, Diseño, entre otras.
+				Según los datos publicados en el Portal de datos abiertos de Pilar, hay un total de <strong>8.856 inscriptos en Universidades, a Marzo de 2017.</strong> </p>
+					
+				<p> <strong>Pre-grado o tecnicatura.</strong> También se puede acceder a carreras cortas o tecnicaturas, cuya duración no superan los 3 años. En Pilar existen <strong> 10 institutos no universitarios </strong> que otorgan títulos de pre-grado y la oferta académica incluye estudios en áreas como Gastronomía, Artes, Educación, entre otros.
+				Según los datos publicados en el Portal de datos abiertos de Pilar, hay un total de <strong>4.744 inscriptos en institutos no universitarios, a Marzo de 2017. </strong></p>	
+
+				</div>	
+		</article>
+		</section>
+
+	<div id="contenedor">
+		<div class="row">
+			<article class="col-md-6">
+			<div id="mapid" style="height: 500px;"></div>
+			<div class="ref">
+				<h3>Referencias</h3>
+				<ul>
+					<li><img src="imgs/cbc.png"> CBC </li>
+					<li><img src="imgs/terciario_privado.png"> Terciarios Privados </li>
+					<li><img src="imgs/terciario_publico.png"> Terciarios Públicos </li>
+					<li><img src="imgs/uni_privada.png"> Universidades Privadas </li>
+					<li><img src="imgs/uni_publica.png"> Universidades Públicas </li>
+				</ul>
+		
+			</div>
+
+			</article>
+			<article class="col-md-6">
+				<div id="main">
+      <div id="sequence"></div>
+
+   <input id="myinput" placeholder="Busca por area como salud o economicas" />
+
+
+      <div id="chart">
+        <article id="contenedor">
+        <div id="explanation" style="visibility: hidden;">
+          <br/><span id="percentage"></span>
+<!--           of visits begin with this sequence of pages -->
+        </div>
+        </article>
+      </div>
+    </div>
+    <div id="sidebar">
+      <input type="checkbox" id="togglelegend"> Legend<br/>
+      <div id="legend" style="visibility: hidden;"></div>
+    </div>
+			</article>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="untitled.js"></script>
+	 <script src="libs/awesomplete-gh-pages/awesomplete.min.js"></script>
+    <script type="text/javascript" src="sequences.js"></script>
+    <script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "700px");
+  </script> 
+</body>
+</html>

@@ -1,0 +1,175 @@
+/*************************************************************
+General style
+*************************************************************/
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #607d8b;
+    line-height: 1.5;
+    background: #eeeeee;
+}
+
+.site-name {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.header-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+/*************************************************************
+    Article
+*************************************************************/
+#banner {
+    background: linear-gradient(to top, rgba(46, 49, 65, 0.7),
+                rgba(46, 49, 65, 0.7)),
+                url("../imgs/lottery.jpg") no-repeat center center fixed;
+    background-size: auto auto, auto auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    color: #ffffff;
+}
+
+#banner > div {
+    padding-top: 25%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#banner h1 {
+    padding-bottom: 15px;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+}
+
+.subtitle {
+    font-size: 24px;
+}
+/*************************************************************
+    Article
+*************************************************************/
+.slide {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.slide h2 {
+    color: #1ABC9C;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.slide h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fc0053;
+    width: 100px;
+    height: 5px;
+}
+/*************************************************************
+    Slides and graph general style
+*************************************************************/
+#infographic {
+    min-height: 500px;
+    position: relative;
+    display: block;
+}
+
+#steps {
+    position: relative;
+    display: inline-block;
+}
+
+#steps > .step{
+    /* hide slide */
+	opacity: .3
+}
+
+#steps .step.graph-scroll-active{
+    /* Show slide */
+	opacity: 1;
+}
+
+.step {
+    margin-bottom: 150px;
+    font-size: 16px;
+    line-height: 23px;
+    color:#767678;
+}
+
+#graph {
+    position: absolute;
+    padding-top: 50px;
+    top: 0px;
+}
+
+.graph-scroll-fixed #graph{
+    /* Fix on scroll */
+    position: fixed;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/* line */
+.min-max-line {
+    stroke: red;
+    stroke-width: 2;
+    fill: none;
+}
+/*************************************************************
+    Footer
+*************************************************************/
+footer {
+    margin-bottom: 500px;
+}

@@ -1,0 +1,158 @@
+/**********************************************************
+ Estilo general
+**********************************************************/
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+    margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li i {
+  padding-right: 10px;
+  color: #0096ff;
+}
+
+li strong, p strong {
+  color: #0096ff;
+}
+
+.navbar {
+    background: #0096ff;
+    z-index: 900;
+}
+/**********************************************************
+ Mapa
+**********************************************************/
+#map {
+    width: 100%;
+    height: 100%;
+    margin-top: -69px;
+}
+
+.leaflet-top {
+    margin-top: 100px;
+}
+
+.leaflet-touch .leaflet-bar a, .leaflet-touch .leaflet-bar button {
+  width: 50px;
+  height: 50px;
+}
+
+.leaflet-touch .leaflet-bar a {
+  padding-top: 10px;
+}
+
+.leaflet-control a{
+  color: #0096ff;
+}
+
+.icon-info {
+  height: 100%;
+  margin-left: -7px;
+}
+
+.disabledProvince {
+    cursor: grab;
+}
+
+.container.info {
+  max-width: 900px;
+  margin-right: 50px;
+}
+
+.info {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 1.4em;
+    line-height: 180%;
+    padding: 6px 8px;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 15px 15px 20px -6px #000;
+    border-radius: 5px;
+}
+
+.info-title {
+  padding-bottom: 20px;
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.info-text {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+}
+
+.info-text.in {
+  opacity: 1;
+}
+
+.info-footer {
+  color: #0096ff;
+  font-weight: bold;
+}
+
+/* The animation code */
+@keyframes example {
+   0%   {background-color: red;}
+   25%  {background-color: yellow;}
+   50%  {background-color: blue;}
+   100% {background-color: green;}
+}
+
+/* The element to apply the animation to */
+.active {
+   background-color: red;
+   animation-name: example;
+   animation-duration: 4s;
+}
+
+/**********************************************************
+ Gallery
+**********************************************************/
+.gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+}
+
+a:hover .gallery-poster {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-poster > img {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+}
+
+.gallery-poster img {
+    height: 48px;
+    margin-left: -24px;
+    margin-top: -24px;
+    opacity: 0.8;
+    width: 48px;
+}

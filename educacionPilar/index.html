@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Educación en Pilar</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+	  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	  crossorigin="anonymous">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+	  href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+	  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+	  crossorigin=""/>
+    <!-- Personal css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+	    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+	    crossorigin="">
+    </script>
+  </head>
+  <body>
+
+    <article class="portada">
+      <div class="container">
+
+	<h1>Educación en Pilar</h1>
+
+	<p> El distrito de Pilar cuenta con una diversa oferta educativa a nivel universitario y terciario.
+	    Actualmente, existen <strong> 18 institutos de educación superior, </strong> de los cuales
+	    <strong>8 son de carácter público y 10 de carácter privado.</strong></p>
+
+	  <p> <strong>Grado.</strong> En Pilar funcionan <strong>8 sedes universitarias de instituciones
+	      privadas y públicas (incluido el CBC) </strong> que ofrecen carreras de grado de áreas diversas
+	    como Sociales, Salud, Económicas, Diseño, entre otras.
+	    Según los datos publicados en el Portal de datos abiertos de Pilar, hay un total de
+	    <strong>8.856 inscriptos en Universidades, a Marzo de 2017.</strong> </p>
+
+	  <p> <strong>Pre-grado o tecnicatura.</strong> También se puede acceder a carreras cortas o tecnicaturas,
+	    cuya duración no superan los 3 años. En Pilar existen <strong> 10 institutos no universitarios </strong>
+	    que otorgan títulos de pre-grado y la oferta académica incluye estudios en áreas como Gastronomía,
+	    Artes, Educación, entre otros.
+	    Según los datos publicados en el Portal de datos abiertos de Pilar, hay un total de
+	    <strong>4.744 inscriptos en institutos no universitarios, a Marzo de 2017. </strong></p>
+
+        <p style="padding-top: 30px;"><strong>Direccionar el mouse sobre los gráficos para conocer la oferta academica de Pilar.</strong></p>
+
+      </div><!--/container -->
+    </article><!--/portada -->
+
+    <article class="plots">
+      <div class="container">
+    	<div class="row">
+
+    	  <!-- Maps Plot -->
+    	  <!-- ========= -->
+    	  <div class="col-md-6">
+    	    <div id="mapid"></div>
+    	  </div><!--/col-sm -->
+
+    	  <!-- Sequences Plot -->
+    	  <div class="col-md-6">
+              <input id="myinput" placeholder="Busca por area como salud o economicas" />
+
+      	      <div id="chart">
+                  <div id="explanation" style="visibility: hidden;">
+  		              <span id="percentage"></span>
+                  </div><!--/#explanation -->
+              </div><!--/#chart -->
+
+              <div id="sequence"></div>
+
+    	  </div><!--/col-sm -->
+
+    	</div><!--row -->
+      </div><!--/container-fluid -->
+    </article><!--/plots -->
+
+    <footer>
+        <div class="container">
+            <p>Datos relevados de Marzo 2017 y publicados en el <a href="http://datosabiertos.pilar.gov.ar/home">Portal de Datos Pilar</a></p>
+            <div class="row justify-content-center">
+            <div class="col-md-2">
+                    <img src="imgs/pilar.png" class="img-fluid rounded float-right" alt="municipalidad pilar">
+                </div>
+            <div class="col-md-2">
+                    <img src="imgs/fundacion2.png" class="img-fluid rounded float-left" alt="fundacion conocimiento abierto">
+                </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Jquery JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	    crossorigin="anonymous"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+	    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
+    <!-- Boostrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+	    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Autocomplete JS -->
+    <script src="libs/awesomplete-gh-pages/awesomplete.min.js"></script>
+    <!-- Map Plot -->
+    <script src="map.js"></script>
+    <!-- Sequences plot -->
+    <script src="sequences.js"></script>
+  </body>
+</html>
