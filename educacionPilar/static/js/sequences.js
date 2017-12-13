@@ -1,5 +1,5 @@
 // Dimensions
-var col = document.getElementsByClassName('col-md-6')[1]
+var col = document.getElementById('col-sequence')
 
 var svgSize = {
     // 30 padding de las row
