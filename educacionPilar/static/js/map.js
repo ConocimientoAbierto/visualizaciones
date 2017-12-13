@@ -1,27 +1,27 @@
 // Points icons
 var icono_uni_pub = L.icon({
         title: 'Universidad Publica',
-        iconUrl: 'imgs/uni_publica.png',
+        iconUrl: 'static/imgs/uni_publica.png',
         iconSize:     [45, 45], // size of the icon
     }),
     icono_uni_pri = L.icon({
         title: 'Universidad Privada',
-        iconUrl: 'imgs/uni_privada.png',
+        iconUrl: 'static/imgs/uni_privada.png',
         iconSize:     [45, 45], // size of the icon
     }),
     icono_ter_pub = L.icon({
         title: 'Terciario Publico',
-        iconUrl: 'imgs/terciario_publico.png',
+        iconUrl: 'static/imgs/terciario_publico.png',
         iconSize:     [45, 45], // size of the icon
     }),
     icono_ter_pri = L.icon({
         title: 'Terciario Privado',
-        iconUrl: 'imgs/terciario_privado.png',
+        iconUrl: 'static/imgs/terciario_privado.png',
         iconSize:     [45, 45], // size of the icon
     }),
     icono_cbc = L.icon({
         title: 'CBC UBA',
-        iconUrl: 'imgs/cbc.png',
+        iconUrl: 'static/imgs/cbc.png',
         iconSize:     [45, 45], // size of the icon
     });
 
