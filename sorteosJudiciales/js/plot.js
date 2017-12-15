@@ -79,7 +79,7 @@ function init() {
     var spinner = new Spinner(opts).spin(target)
 
     // Get the data
-    var dataUrl = "https://github.com/ConocimientoAbierto/visualizaciones/blob/gh-pages/sorteosJudiciales/data/sorteos.csv?raw=true"
+    var dataUrl = "https://conocimientoabierto.github.io/visualizaciones/sorteosJudiciales/data/sorteos.csv"
     d3.csv(dataUrl, function(error, data) {
         // Catch the errors
         if (error) throw error
