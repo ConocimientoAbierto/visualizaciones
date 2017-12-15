@@ -4,7 +4,7 @@
 var col = document.getElementById('graph-col')
 
 var containerSize = {
-    width: col.clientWidth - 30, // 30px row paddinf
+    width: col.clientWidth - 30, // 30px row padding
     height: 500
 }
 
@@ -49,15 +49,20 @@ var xBar = d3.scaleBand()
 */
 var parseDate = d3.timeParse("%d/%m/%Y"),
     dataCSV,
-    dataBins
+    dataBins,
+    judgesFirstName = ["Servini de Cubria", "Ramos", "Rafecas", "Lijo",
+                       "Martinez de Giorgi (5)", "Canicoba Corral", "Casanello",
+                       "Martinez de Giorgi (8)", "Rodriguez", "Ercolini",
+                       "Bonadio", "Torres"],
+    judgesLastName = ["Maria Romilda", "Sebastian Roberto", "Daniel Eduardo",
+                      "Ariel Oscar", "Marcelo Pedro", "Rodolfo A.",
+                      "Sebastian Norberto", "Marcelo Pedro", "Luis Osvaldo",
+                      "Julian Daniel", "Claudio", "Sergio Gabriel"]
 
 /*
-    Loader settings
-
-    The spinner code was take from this link
-    http://bl.ocks.org/eesur/cf81a5ea738f85732707
-
-    tanks to Sundar!
+    Spinner settings
+    This code was take from http://bl.ocks.org/eesur/cf81a5ea738f85732707
+    Tanks to Sundar!
 */
 var opts = {
     lines: 9, // The number of lines to draw
@@ -164,7 +169,9 @@ function calculateBins( data ) {
     for (i = 1; i < 13; i++ ) {
         partial.push({
             "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL " + i,
-            "judge_name": "",
+            "judgeFisrtName": judgesFirstName[ i - 1],
+            "judgeLastName": judgesLastName[ i - 1 ],
+            "judgeFullName": judgesFirstName[ i - 1] + ", " + judgesLastName[ i - 1 ],
             "order": i,
             "total": 0,
             "corruption": 0
@@ -201,7 +208,7 @@ function plotBars( data, corruption=false ) {
     })
 
     // Set the domains
-    xBar.domain( data.map( function ( d ) { return d.judged }))
+    xBar.domain( data.map( function ( d ) { return d.judgeFullName }))
     yBar.domain( [0, d3.max( data, function( d ) { return d.values })])
 
     // Append the rectangles for the bar chart
@@ -212,7 +219,7 @@ function plotBars( data, corruption=false ) {
     bars.enter()
         .append("svg:rect")
         .attr("class", "bar")
-        .attr("x", function( d ) { return xBar( d.judged ) })
+        .attr("x", function( d ) { return xBar( d.judgeFullName ) })
         .attr("y", function(d ) { return height })
         .attr("width", xBar.bandwidth())
         .attr("height", 0)
@@ -228,17 +235,17 @@ function plotBars( data, corruption=false ) {
         .attr("y", function( d ) { return yBar( d.values ) })
 		.attr("height", function( d ) { return  height - yBar( d.values ) })
 
-    // Set the Axis
+    // Set X-Axis
     svg.select("g.x")
         .call(d3.axisBottom(xBar))
-        .selectAll("text")
-            .style("text-anchor", "end")
-            .attr("transform", "rotate(-65)")
+        .selectAll(".tick text")
+        .call(wrap, xBar.bandwidth())
 
+    // Set Y-Axis
     svg.select("g.y")
         .transition()
         .duration(500)
-        .call(d3.axisLeft(yBar));
+        .call(d3.axisLeft(yBar))
 }
 
 
@@ -265,11 +272,11 @@ function plotLines( data, corruption=false ) {
         pointMax = d3.max( data, function( d ) { return d.values })
 
 	var lineMin = d3.line()
-			.x( function( d ) { return xBar( d.judged ) + xBar.bandwidth()/2 })
+			.x( function( d ) { return xBar( d.judgeFullName ) + xBar.bandwidth()/2 })
 			.y( function( d ) { return yLine( pointMin ) })
 
     var lineMax = d3.line()
-			.x( function( d ) { return xBar( d.judged ) + xBar.bandwidth()/2 })
+			.x( function( d ) { return xBar( d.judgeFullName ) + xBar.bandwidth()/2 })
 			.y( function( d ) { return yLine( pointMax ) })
 
     var pathMax = svg.append("path")
@@ -339,10 +346,75 @@ function plotHistorical( data ) {
       .attr("height", function(d) { return height - yHis(d.length); })
 
 
+      // Append the rectangles for the bar chart
+      /*
+      var bars = svg.selectAll("rect")
+          .data(bins)
+
+      // Enter
+      bars.enter()
+          .append("svg:rect")
+          .attr("class", "bar")
+          .attr("x", 1)
+          .attr("y", function(d ) { return height })
+          .attr("width", xBar.bandwidth())
+          .attr("height", 0)
+          //.on('mouseover', tool_tip.show)
+          //.on('mouseout', tool_tip.hide)
+
+      bars
+          .attr("y", height)
+  		.attr("height", 0)
+  		.transition()
+  		.duration(500)
+          .delay(function (d, i) { return i * 100 })
+          .attr("y", function( d ) { return yBar( d.values ) })
+  		.attr("height", function( d ) { return  height - yBar( d.values ) })
+        */
+
   svg.select("g.x")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom( xHis ))
 
   svg.select("g.y")
       .call(d3.axisLeft( yHis ))
+}
+
+
+function wrap(text, width) {
+    /*
+    Break long label in multiple lines.
+    This code was take from https://bl.ocks.org/mbostock/7555321
+    Thanks to Mike Bostock!
+    */
+    text.each( function() {
+        var text = d3.select( this ),
+            words = text.text( ).split( /\s+/ ).reverse( ),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            y = text.attr( "y" ),
+            dy = parseFloat( text.attr( "dy" )),
+            tspan = text.text( null )
+                        .append( "tspan" )
+                        .attr( "x", 0 )
+                        .attr( "y", y )
+                        .attr( "dy", dy + "em" )
+
+        while ( word = words.pop() ) {
+            line.push( word )
+            tspan.text( line.join( " " ))
+            if ( tspan.node().getComputedTextLength() > width) {
+                line.pop()
+                tspan.text(line.join( " " ))
+                line = [word]
+                tspan = text.append("tspan")
+                            .attr("x", 0)
+                            .attr("y", y)
+                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                            .text(word)
+            }
+        }
+    })
 }
