@@ -85,6 +85,7 @@ function init() {
 
     // Get the data
     var dataUrl = "https://conocimientoabierto.github.io/visualizaciones/sorteosJudiciales/data/sorteos.csv"
+    var dataUrl = '../data/sorteos.csv'
     d3.csv(dataUrl, function(error, data) {
         // Catch the errors
         if (error) throw error
@@ -106,22 +107,26 @@ function init() {
         //
         scroll.on('active', function( i ){
 
-            if (i == 0) {
-                removeLine()
-                plotBars(dataBins)
+            if ( i == 0 ) {
+                // todos los sorteos
+                plotBars( dataBins )
             }
-            if (i == 1) {
-                plotLines(dataBins)
+            if ( i == 1 ) {
+                // zoom sorteos
+                partial = minMaxBins( dataBins )
+                plotBars( partial )
             }
             if (i == 2) {
-                removeLine()
-                plotBars(dataBins, corruption=true)
+                // corrupcion
+                plotBars( dataBins, corruption=true )
             }
             if (i == 3) {
-                plotLines(dataBins, corruption=true)
+                // zoom corrupcion
+                partial = minMaxBins( dataBins, corrupcion=true )
+                plotBars( partial, corrupcion=true )
             }
             if (i == 4) {
-                removeLine()
+                // Historico
                 plotHistorical(dataCSV)
             }
 
@@ -131,37 +136,9 @@ function init() {
 }
 
 
-function filterData( kirchnerismo, macrismo ) {
-    /*
-
-    */
-    dataFilter = []
-
-    // Filter kirchnerismo
-    if (kirchnerismo == true) {
-        dataCSV.map( function ( d ) {
-            if ( d.fechaAsignacion < parseDate("21/08/2016") ) {
-                dataFilter.push( d)
-            }
-        })
-    }
-
-    // Filter macrismo
-    if (macrismo == true) {
-        dataCSV.map( function ( d ) {
-            if ( d.fechaAsignacion > parseDate("21/08/2016") ) {
-                dataFilter.push( d)
-            }
-        })
-    }
-
-    return dataFilter
-}
-
-
 function calculateBins( data ) {
     /*
-
+    Calculate the data from each judged
     */
     var partial = []
 
@@ -193,6 +170,74 @@ function calculateBins( data ) {
 }
 
 
+function minMaxBins ( data, corruption=false ) {
+    /*
+    Return the bins with the max min values
+    */
+
+    var partial = []
+
+    if ( corruption == false ) {
+        var maxValue = d3.max(data, function( d ) { return d.total }),
+            minValue = d3.min(data, function( d ) { return d.total })
+
+        data.forEach( function ( d ) {
+            if ( d.total == maxValue ) {
+                partial.push(d)
+            }
+
+            if ( d.total == minValue ) {
+                partial.push(d)
+            }
+        })
+    }
+    else {
+        var maxValue = d3.max(data, function( d ) { return d.corruption }),
+            minValue = d3.min(data, function( d ) { return d.corruption })
+
+        data.forEach( function ( d ) {
+            if ( d.corruption == maxValue ) {
+                partial.push(d)
+            }
+
+            if ( d.corruption == minValue ) {
+                partial.push(d)
+            }
+        })
+    }
+
+    return partial
+}
+
+
+function filterData( kirchnerismo, macrismo ) {
+    /*
+
+    */
+    dataFilter = []
+
+    // Filter kirchnerismo
+    if (kirchnerismo == true) {
+        dataCSV.map( function ( d ) {
+            if ( d.fechaAsignacion < parseDate("21/08/2016") ) {
+                dataFilter.push( d)
+            }
+        })
+    }
+
+    // Filter macrismo
+    if (macrismo == true) {
+        dataCSV.map( function ( d ) {
+            if ( d.fechaAsignacion > parseDate("21/08/2016") ) {
+                dataFilter.push( d)
+            }
+        })
+    }
+
+    return dataFilter
+}
+
+
 function plotBars( data, corruption=false ) {
     /*
 
@@ -215,23 +260,38 @@ function plotBars( data, corruption=false ) {
     var bars = svg.selectAll("rect")
         .data(data)
 
-    // Enter
+    bars.exit()
+        .transition()
+            .duration(800)
+        .attr("y", height)
+        .attr("height", 0)
+        .remove();
+
+    // New data
     bars.enter()
-        .append("svg:rect")
+        .append("rect")
         .attr("class", "bar")
         .attr("x", function( d ) { return xBar( d.judgeFullName ) })
-        .attr("y", function(d ) { return height })
+        .attr("y", height )
         .attr("width", xBar.bandwidth())
         .attr("height", 0)
         //.on('mouseover', tool_tip.show)
         //.on('mouseout', tool_tip.hide)
+        .transition()
+		    .duration(800)
+            .delay(function (d, i) { return i * 100 })
+        .attr("y", function( d ) { return yBar( d.values ) })
+		.attr("height", function( d ) { return  height - yBar( d.values ) })
 
+    // Update
     bars
-        .attr("y", height)
-		.attr("height", 0)
+        .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+        .attr("y", height )
+        .attr("width", xBar.bandwidth())
+        .attr("height", 0)
 		.transition()
-		.duration(500)
-        .delay(function (d, i) { return i * 100 })
+		    .duration(800)
+            .delay(function (d, i) { return i * 100 })
         .attr("y", function( d ) { return yBar( d.values ) })
 		.attr("height", function( d ) { return  height - yBar( d.values ) })
 
@@ -249,81 +309,19 @@ function plotBars( data, corruption=false ) {
 }
 
 
-function plotLines( data, corruption=false ) {
-    /*
-
-    */
-    // Get all the draws or just the corruption ones
-    data.map( function ( d ) {
-        if ( corruption == true ) {
-            d.values = d.corruption
-        }
-        else {
-            d.values = d.total
-        }
-    })
-
-    // Scale the range of the data in the domains
-    yLine.domain( [0, d3.max( data, function( d ) {
-        return d.values
-    })])
-
-    var pointMin = d3.min( data, function( d ) { return d.values }),
-        pointMax = d3.max( data, function( d ) { return d.values })
-
-	var lineMin = d3.line()
-			.x( function( d ) { return xBar( d.judgeFullName ) + xBar.bandwidth()/2 })
-			.y( function( d ) { return yLine( pointMin ) })
-
-    var lineMax = d3.line()
-			.x( function( d ) { return xBar( d.judgeFullName ) + xBar.bandwidth()/2 })
-			.y( function( d ) { return yLine( pointMax ) })
-
-    var pathMax = svg.append("path")
-       .attr("class", "min-max-line")
-       .attr("d", lineMax( data ))
-
-    var pathMin = svg.append("path")
-        .attr("class", "min-max-line")
-        .attr("d", lineMin( data ))
-
-    var totalLength = pathMin.node().getTotalLength()
-
-    pathMax
-        .attr("stroke-dasharray", totalLength + " " + totalLength)
-        .attr("stroke-dashoffset", totalLength)
-        .transition()
-        .duration(2000)
-        .ease(d3.easeLinear)
-        .attr("stroke-dashoffset", 0);
-
-    pathMin
-        .attr("stroke-dasharray", totalLength + " " + totalLength)
-        .attr("stroke-dashoffset", totalLength)
-        .transition()
-        .duration(2000)
-        .ease(d3.easeLinear)
-        .attr("stroke-dashoffset", 0);
-}
-
-
-function removeLine() {
-    d3.selectAll(".min-max-line").remove()
-}
-
-
 function plotHistorical( data ) {
     /*
 
     */
     d3.selectAll(".bar").remove()
 
+    // Set X-Axis domain
     var dateMax = d3.max( data, function ( d ) { return d.fechaAsignacion }),
         dateMin = d3.min( data, function ( d ) { return d.fechaAsignacion })
 
     xHis.domain([dateMin, dateMax])
 
-    // set the parameters for the histogram
+    // Set the parameters for the histogram
     var histogram = d3.histogram()
         .value(function( d ) { return d.fechaAsignacion })
         .domain(xHis.domain())
@@ -335,6 +333,7 @@ function plotHistorical( data ) {
     // Scale the range of the data in the y domain
     yHis.domain([0, d3.max(bins, function(d) { return d.length; })])
 
+    /*
     svg.selectAll("rect")
       .data(bins)
     .enter().append("rect")
@@ -344,33 +343,54 @@ function plotHistorical( data ) {
 		  return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")"; })
       .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 ; })
       .attr("height", function(d) { return height - yHis(d.length); })
-
+      */
 
       // Append the rectangles for the bar chart
-      /*
       var bars = svg.selectAll("rect")
           .data(bins)
 
-      // Enter
+      bars.exit()
+          .transition()
+              .duration(800)
+          .attr("y", height)
+          .attr("height", 0)
+          .remove();
+
+      // New data
       bars.enter()
-          .append("svg:rect")
+          .append("rect")
           .attr("class", "bar")
           .attr("x", 1)
-          .attr("y", function(d ) { return height })
+          .attr("transform", function(d) {
+    		  return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")"; })
+          .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 ; })
+          .attr("height", function(d) { return height - yHis(d.length); })
+          /*
+          .attr("y", height )
           .attr("width", xBar.bandwidth())
           .attr("height", 0)
           //.on('mouseover', tool_tip.show)
           //.on('mouseout', tool_tip.hide)
-
-      bars
-          .attr("y", height)
-  		.attr("height", 0)
-  		.transition()
-  		.duration(500)
-          .delay(function (d, i) { return i * 100 })
+          .transition()
+  		    .duration(800)
+              .delay(function (d, i) { return i * 100 })
           .attr("y", function( d ) { return yBar( d.values ) })
   		.attr("height", function( d ) { return  height - yBar( d.values ) })
         */
+
+        /*
+      // Update
+      bars
+          .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+          .attr("y", height )
+          .attr("width", xBar.bandwidth())
+          .attr("height", 0)
+  		.transition()
+  		    .duration(800)
+              .delay(function (d, i) { return i * 100 })
+          .attr("y", function( d ) { return yBar( d.values ) })
+  		.attr("height", function( d ) { return  height - yBar( d.values ) })
+*/
 
   svg.select("g.x")
       .attr("transform", "translate(0," + height + ")")
