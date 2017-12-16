@@ -137,7 +137,7 @@ function init() {
             }
             if (i == 4) {
                 // Historico
-                plotHistorical(dataCSV)
+                plotHistorical( dataCSV )
             }
 
             console.log(i + 'th section active')
@@ -323,6 +323,15 @@ function plotHistorical( data ) {
     /*
 
     */
+    //
+    toolTip.html(function ( d ) {
+        var text = "<strong>Fecha: </strong>" + (d.x0.getMonth() + 1) + "/" +
+                   d.x0.getFullYear() + " al " + (d.x1.getMonth() + 1) +
+                   '/' + d.x1.getFullYear() +
+                   "<br><strong>Cantidad de causas: </strong>" + d.length
+        return text
+    })
+
     d3.selectAll(".bar").remove()
 
     // Set X-Axis domain
@@ -343,71 +352,29 @@ function plotHistorical( data ) {
     // Scale the range of the data in the y domain
     yHis.domain([0, d3.max(bins, function(d) { return d.length; })])
 
-    /*
-    svg.selectAll("rect")
-      .data(bins)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", 1)
-      .attr("transform", function(d) {
-		  return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")"; })
-      .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 ; })
-      .attr("height", function(d) { return height - yHis(d.length); })
-      */
+    bars = svg.selectAll("rect")
+              .data(bins)
 
-      // Append the rectangles for the bar chart
-      var bars = svg.selectAll("rect")
-          .data(bins)
+    // New Data
+    bars.enter()
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", 1)
+        .attr("transform", function(d) {
+            return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")" })
+        .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 })
+        .attr("height", function(d) { return height - yHis(d.length) })
+        .on('mouseover', toolTip.show)
+        .on('mouseout', toolTip.hide)
 
-      bars.exit()
-          .transition()
-              .duration(800)
-          .attr("y", height)
-          .attr("height", 0)
-          .remove();
+    // Update X-Axis
+    svg.select("g.x")
+       .attr("transform", "translate(0," + height + ")")
+       .call(d3.axisBottom( xHis ))
 
-      // New data
-      bars.enter()
-          .append("rect")
-          .attr("class", "bar")
-          .attr("x", 1)
-          .attr("transform", function(d) {
-    		  return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")"; })
-          .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 ; })
-          .attr("height", function(d) { return height - yHis(d.length); })
-          /*
-          .attr("y", height )
-          .attr("width", xBar.bandwidth())
-          .attr("height", 0)
-          //.on('mouseover', tool_tip.show)
-          //.on('mouseout', tool_tip.hide)
-          .transition()
-  		    .duration(800)
-              .delay(function (d, i) { return i * 100 })
-          .attr("y", function( d ) { return yBar( d.values ) })
-  		.attr("height", function( d ) { return  height - yBar( d.values ) })
-        */
-
-        /*
-      // Update
-      bars
-          .attr("x", function( d ) { return xBar( d.judgeFullName ) })
-          .attr("y", height )
-          .attr("width", xBar.bandwidth())
-          .attr("height", 0)
-  		.transition()
-  		    .duration(800)
-              .delay(function (d, i) { return i * 100 })
-          .attr("y", function( d ) { return yBar( d.values ) })
-  		.attr("height", function( d ) { return  height - yBar( d.values ) })
-*/
-
-  svg.select("g.x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom( xHis ))
-
-  svg.select("g.y")
-      .call(d3.axisLeft( yHis ))
+    // Update Y-Axis
+    svg.select("g.y")
+       .call(d3.axisLeft( yHis ))
 }
 
 
