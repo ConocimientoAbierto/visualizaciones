@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="keywords" content=""  />
+        <meta name="description" content=""  />
+        <meta name="url_thumb" content="" />
+        <meta name="title" content=""  />
+
+        <!--  Bootstrap CSS -->
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="graph-col">
+
+                    <div id="graph"></div>
+
+                </div><!--/col -->
+            </div><!--/row -->
+        </div><!--/container -->
+
+        <!-- D3 JS -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="js/d3-tip.js"></script>
+
+        <!-- Plot -->
+        <script>
+            var data = [
+                {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 1",
+                    "judgeFisrtName": "Servini de Cubria",
+                    "judgeLastName": "Maria Romilda",
+                    "judgeFullName": "Servini de Cubria, Maria Romilda",
+                    "order": 1,
+                    "total": 2744,
+                    "corruption": 9,
+                    "values": 9
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 2",
+                    "judgeFisrtName": "Ramos",
+                    "judgeLastName": "Sebastian Roberto",
+                    "judgeFullName": "Ramos, Sebastian Roberto",
+                    "order": 2,
+                    "total": 2601,
+                    "corruption": 34,
+                    "values": 34
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 3",
+                    "judgeFisrtName": "Rafecas",
+                    "judgeLastName": "Daniel Eduardo",
+                    "judgeFullName": "Rafecas, Daniel Eduardo",
+                    "order": 3,
+                    "total": 2479,
+                    "corruption": 18,
+                    "values": 18
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 4",
+                    "judgeFisrtName": "Lijo",
+                    "judgeLastName": "Ariel Oscar",
+                    "judgeFullName": "Lijo, Ariel Oscar",
+                    "order": 4,
+                    "total": 2405,
+                    "corruption": 23,
+                    "values": 23
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 5",
+                    "judgeFisrtName": "Martinez de Giorgi (5)",
+                    "judgeLastName": "Marcelo Pedro",
+                    "judgeFullName": "Martinez de Giorgi (5), Marcelo Pedro",
+                    "order": 5,
+                    "total": 2483,
+                    "corruption": 16,
+                    "values": 16
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 6",
+                    "judgeFisrtName": "Canicoba Corral",
+                    "judgeLastName": "Rodolfo A.",
+                    "judgeFullName": "Canicoba Corral, Rodolfo A.",
+                    "order": 6,
+                    "total": 2680,
+                    "corruption": 19,
+                    "values": 19
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 7",
+                    "judgeFisrtName": "Casanello",
+                    "judgeLastName": "Sebastian Norberto",
+                    "judgeFullName": "Casanello, Sebastian Norberto",
+                    "order": 7,
+                    "total": 2713,
+                    "corruption": 26,
+                    "values": 26
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 8",
+                    "judgeFisrtName": "Martinez de Giorgi (8)",
+                    "judgeLastName": "Marcelo Pedro",
+                    "judgeFullName": "Martinez de Giorgi (8), Marcelo Pedro",
+                    "order": 8,
+                    "total": 2864,
+                    "corruption": 26,
+                    "values": 26
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 9",
+                    "judgeFisrtName": "Rodriguez",
+                    "judgeLastName": "Luis Osvaldo",
+                    "judgeFullName": "Rodriguez, Luis Osvaldo",
+                    "order": 9,
+                    "total": 3017,
+                    "corruption": 32,
+                    "values": 32
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 10",
+                    "judgeFisrtName": "Ercolini",
+                    "judgeLastName": "Julian Daniel",
+                    "judgeFullName": "Ercolini, Julian Daniel",
+                    "order": 10,
+                    "total": 3009,
+                    "corruption": 20,
+                    "values": 20
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 11",
+                    "judgeFisrtName": "Bonadio",
+                    "judgeLastName": "Claudio",
+                    "judgeFullName": "Bonadio, Claudio",
+                    "order": 11,
+                    "total": 3011,
+                    "corruption": 55,
+                    "values": 55
+                }, {
+                    "judged": "JUZGADO CRIMINAL Y CORRECCIONAL FEDERAL 12",
+                    "judgeFisrtName": "Torres",
+                    "judgeLastName": "Sergio Gabriel",
+                    "judgeFullName": "Torres, Sergio Gabriel",
+                    "order": 12,
+                    "total": 2964,
+                    "corruption": 28,
+                    "values": 28
+                }
+            ]
+
+            /*
+                Set the dimensions and margins of the graph
+            */
+            var col = document.getElementById('graph-col')
+
+            var containerSize = {
+                width: col.clientWidth - 30, // 30px row padding
+                height: 500
+            }
+
+            var margin = {top: 20, right: 20, bottom: 90, left: 40},
+                width = containerSize.width - margin.left - margin.right,
+                height = containerSize.height - margin.top - margin.bottom
+
+            var svg = d3.select("#graph").append("svg")
+                        .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .append("g")
+                        .attr("transform",
+                              "translate(" + margin.left + "," + margin.top + ")")
+
+            /*
+                Create the axis
+            */
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+
+            svg.append("g")
+                .attr("class", "y axis")
+
+            /*
+                Set the ranges
+            */
+            var xBar = d3.scaleBand()
+                         .range([0, width])
+                         .padding(0.3),
+                yBar = d3.scaleLinear()
+                         .range([height, 0])
+
+            /*
+                Initialize tooltip
+            */
+            var toolTip = d3.tip()
+                            .attr( 'class', 'd3-tip' )
+                            .offset( [-10, 0] )
+                            .html(function ( d ) {
+                                return "<strong>Cantidad de causas: </strong>" + d.values
+                            })
+
+            svg.call(toolTip)
+
+            /*
+                General variables
+            */
+            var parseDate = d3.timeParse("%d/%m/%Y"),
+                dataCSV,
+                dataBins,
+                judgesFirstName = ["Servini de Cubria", "Ramos", "Rafecas", "Lijo",
+                                   "Martinez de Giorgi (5)", "Canicoba Corral", "Casanello",
+                                   "Martinez de Giorgi (8)", "Rodriguez", "Ercolini",
+                                   "Bonadio", "Torres"],
+                judgesLastName = ["Maria Romilda", "Sebastian Roberto", "Daniel Eduardo",
+                                  "Ariel Oscar", "Marcelo Pedro", "Rodolfo A.",
+                                  "Sebastian Norberto", "Marcelo Pedro", "Luis Osvaldo",
+                                  "Julian Daniel", "Claudio", "Sergio Gabriel"]
+
+            var partial = minMaxBins( data )
+            plotBars( partial )
+
+            function plotBars( data, corruption=false ) {
+                  /*
+
+                  */
+                  // Get all the draws or just the corruption ones
+                  data.map( function ( d ) {
+                      if ( corruption == true ) {
+                          d.values = d.corruption
+                      }
+                      else {
+                          d.values = d.total
+                      }
+                  })
+
+                  // Set the domains
+                  xBar.domain( data.map( function ( d ) { return d.judgeFullName }))
+                  yBar.domain( [0, d3.max( data, function( d ) { return d.values })])
+
+                  // Append the rectangles for the bar chart
+                  var bars = svg.selectAll("rect")
+                      .data(data)
+
+                  bars.exit()
+                      .transition()
+                          .duration(800)
+                      .attr("y", height)
+                      .attr("height", 0)
+                      .remove();
+
+                  // New data
+                  bars.enter()
+                      .append("rect")
+                      .attr("class", "bar")
+                      .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+                      .attr("y", height )
+                      .attr("width", xBar.bandwidth())
+                      .attr("height", 0)
+                      .on('mouseover', toolTip.show)
+                      .on('mouseout', toolTip.hide)
+                      .transition()
+              		    .duration(800)
+                          .delay(function (d, i) { return i * 100 })
+                      .attr("y", function( d ) { return yBar( d.values ) })
+              		.attr("height", function( d ) { return  height - yBar( d.values ) })
+
+                  // Update
+                  bars
+                      .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+                      .attr("y", height )
+                      .attr("width", xBar.bandwidth())
+                      .attr("height", 0)
+              		.transition()
+              		    .duration(800)
+                          .delay(function (d, i) { return i * 100 })
+                      .attr("y", function( d ) { return yBar( d.values ) })
+              		.attr("height", function( d ) { return  height - yBar( d.values ) })
+
+                  // Set X-Axis
+                  svg.select("g.x")
+                      .call(d3.axisBottom(xBar))
+                      .selectAll(".tick text")
+                      .call(wrap, xBar.bandwidth())
+
+                  // Set Y-Axis
+                  svg.select("g.y")
+                      .transition()
+                      .duration(500)
+                      .call(d3.axisLeft(yBar))
+              }
+
+            function minMaxBins ( data, corruption=false ) {
+                  /*
+                  Return the bins with the max min values
+                  */
+
+                  var partial = []
+
+                  if ( corruption == false ) {
+                      var maxValue = d3.max(data, function( d ) { return d.total }),
+                          minValue = d3.min(data, function( d ) { return d.total })
+
+                      data.forEach( function ( d ) {
+                          if ( d.total == maxValue ) {
+                              partial.push(d)
+                          }
+
+                          if ( d.total == minValue ) {
+                              partial.push(d)
+                          }
+                      })
+                  }
+                  else {
+                      var maxValue = d3.max(data, function( d ) { return d.corruption }),
+                          minValue = d3.min(data, function( d ) { return d.corruption })
+
+                      data.forEach( function ( d ) {
+                          if ( d.corruption == maxValue ) {
+                              partial.push(d)
+                          }
+
+                          if ( d.corruption == minValue ) {
+                              partial.push(d)
+                          }
+                      })
+                  }
+
+                  return partial
+              }
+
+            function wrap(text, width) {
+                  /*
+                  Break long label in multiple lines.
+                  This code was take from https://bl.ocks.org/mbostock/7555321
+                  Thanks to Mike Bostock!
+                  */
+                  text.each( function() {
+                      var text = d3.select( this ),
+                          words = text.text( ).split( /\s+/ ).reverse( ),
+                          word,
+                          line = [],
+                          lineNumber = 0,
+                          lineHeight = 1.1, // ems
+                          y = text.attr( "y" ),
+                          dy = parseFloat( text.attr( "dy" )),
+                          tspan = text.text( null )
+                                      .append( "tspan" )
+                                      .attr( "x", 0 )
+                                      .attr( "y", y )
+                                      .attr( "dy", dy + "em" )
+
+                      while ( word = words.pop() ) {
+                          line.push( word )
+                          tspan.text( line.join( " " ))
+                          if ( tspan.node().getComputedTextLength() > width) {
+                              line.pop()
+                              tspan.text(line.join( " " ))
+                              line = [word]
+                              tspan = text.append("tspan")
+                                          .attr("x", 0)
+                                          .attr("y", y)
+                                          .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                                          .text(word)
+                          }
+                      }
+                  })
+              }
+        </script>
+    </body>
+</html>
