@@ -40,9 +40,19 @@ var xBar = d3.scaleBand()
     yBar = d3.scaleLinear()
              .range([height, 0]),
     yHis = d3.scaleLinear()
-             .range([height, 0]),
-    yLine = d3.scaleLinear()
-              .range([height, 0])
+             .range([height, 0])
+
+/*
+    Initialize tooltip
+*/
+var toolTip = d3.tip()
+                .attr( 'class', 'd3-tip' )
+                .offset( [-10, 0] )
+                .html(function ( d ) {
+                    return "<strong>Cantidad de causas: </strong>" + d.values
+                })
+
+svg.call(toolTip)
 
 /*
     General variables
@@ -275,8 +285,8 @@ function plotBars( data, corruption=false ) {
         .attr("y", height )
         .attr("width", xBar.bandwidth())
         .attr("height", 0)
-        //.on('mouseover', tool_tip.show)
-        //.on('mouseout', tool_tip.hide)
+        .on('mouseover', toolTip.show)
+        .on('mouseout', toolTip.hide)
         .transition()
 		    .duration(800)
             .delay(function (d, i) { return i * 100 })
