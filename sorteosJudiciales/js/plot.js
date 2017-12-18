@@ -437,6 +437,7 @@ function plotHistorical( data ) {
     })
 
     d3.selectAll("rect").remove()
+    d3.selectAll(".legend").remove()
 
     // Set X-Axis domain
     var dateMax = d3.max( data, function ( d ) { return d.fechaAsignacion }),
@@ -560,6 +561,7 @@ function plotBarsFilter(data) {
         .call(d3.axisLeft(yBar))
 
 var legend = svg.append("g")
+    .attr("class", "legend")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "end")
