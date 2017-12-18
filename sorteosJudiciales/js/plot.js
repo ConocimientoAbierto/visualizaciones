@@ -48,9 +48,6 @@ var xBar = d3.scaleBand()
 var toolTip = d3.tip()
                 .attr( 'class', 'd3-tip' )
                 .offset( [-10, 0] )
-                .html(function ( d ) {
-                    return "<strong>Cantidad de causas: </strong>" + d.values
-                })
 
 svg.call(toolTip)
 
@@ -95,7 +92,7 @@ function init() {
 
     // Get the data
     var dataUrl = "https://conocimientoabierto.github.io/visualizaciones/sorteosJudiciales/data/sorteos.csv"
-    //var dataUrl = '../data/sorteos.csv'
+    var dataUrl = '../data/sorteos.csv'
     d3.csv(dataUrl, function(error, data) {
         // Catch the errors
         if (error) throw error
@@ -139,9 +136,104 @@ function init() {
                 // Historico
                 plotHistorical( dataCSV )
             }
+            if (i == 5 ) {
+                // Filtro
+                // Data by date
+                var dataM = filterByDate( dataCSV, false, true )
+                var dataK = filterByDate( dataCSV, true, false )
+
+                // Bins
+                var binsM = calculateBins( dataM )
+                var binsK = calculateBins( dataK )
+
+                var m = [],
+                    k = [],
+                    j = []
+                binsM.forEach( function ( d ) {
+                    m.push( d.total )
+                    j.push( d.judgeFullName )
+                })
+                binsK.forEach( function ( d ) {
+                    k.push( d.total )
+                })
+
+                var ddM = []
+
+                for (i=0; i < k.length; i++) {
+                    ddM.push({ "values": k[i],
+                                "key": 'Kirchnerismo',
+                                "judgeFullName": j[i] })
+                }
+
+                for (i=0; i < m.length; i++) {
+                    ddM.push({ "values": m[i],
+                                "key": 'Macrismo',
+                                "judgeFullName": j[i] })
+                }
+                plotBarsFilter( ddM )
+
+                d3.select("#crimeInput").on("input", function() {
+                    var input = this.value
+                    var partial = []
+
+                    dataCSV.forEach( function ( line ) {
+                        if ( line.delitos.includes( input ) == true ) {
+                            partial.push( line )
+                        }
+                    })
+
+                    if (input == 'todos') {
+                        partial = dataCSV
+                    }
+
+                    // Data by date
+                    var dataM = filterByDate( partial, false, true )
+                    var dataK = filterByDate( partial, true, false )
+
+                    // Bins
+                    var binsM = calculateBins( dataM )
+                    var binsK = calculateBins( dataK )
+
+                    var m = [],
+                        k = [],
+                        j = []
+                    binsM.forEach( function ( d ) {
+                        m.push( d.total )
+                        j.push( d.judgeFullName )
+                    })
+                    binsK.forEach( function ( d ) {
+                        k.push( d.total )
+                    })
+
+                    var ddM = []
+
+		            for (i=0; i < k.length; i++) {
+                        ddM.push({ "values": k[i],
+                                    "key": 'Kirchnerismo',
+                                    "judgeFullName": j[i] })
+                    }
+
+                    for (i=0; i < m.length; i++) {
+                        ddM.push({ "values": m[i],
+                                    "key": 'Macrismo',
+                                    "judgeFullName": j[i] })
+                    }
+                    plotBarsFilter( ddM )
+                })
+
+            }
 
             console.log(i + 'th section active')
         })
+    })
+
+    // Add the options input
+    select = document.getElementById('crimeInput')
+    uniqueCrimes.forEach( function ( d ) {
+        var opt = document.createElement('option')
+        opt.value = d
+        opt.innerHTML = d
+        select.appendChild(opt)
     })
 }
 
@@ -220,7 +312,7 @@ function minMaxBins ( data, corruption=false ) {
 }
 
 
-function filterData( kirchnerismo, macrismo ) {
+function filterByDate( data, kirchnerismo, macrismo ) {
     /*
 
     */
@@ -228,8 +320,8 @@ function filterData( kirchnerismo, macrismo ) {
 
     // Filter kirchnerismo
     if (kirchnerismo == true) {
-        dataCSV.map( function ( d ) {
-            if ( d.fechaAsignacion < parseDate("21/08/2016") ) {
+        data.map( function ( d ) {
+            if ( d.fechaAsignacion < parseDate("10/12/2015") ) {
                 dataFilter.push( d)
             }
         })
@@ -237,8 +329,8 @@ function filterData( kirchnerismo, macrismo ) {
 
     // Filter macrismo
     if (macrismo == true) {
-        dataCSV.map( function ( d ) {
-            if ( d.fechaAsignacion > parseDate("21/08/2016") ) {
+        data.map( function ( d ) {
+            if ( d.fechaAsignacion >= parseDate("10/12/2015") ) {
                 dataFilter.push( d)
             }
         })
@@ -252,6 +344,11 @@ function plotBars( data, corruption=false ) {
     /*
 
     */
+    // Set the tooptip
+    toolTip.html(function ( d ) {
+        return "<strong>Cantidad de causas: </strong>" + d.values
+    })
+
     // Get all the draws or just the corruption ones
     data.map( function ( d ) {
         if ( corruption == true ) {
@@ -332,7 +429,7 @@ function plotHistorical( data ) {
         return text
     })
 
-    d3.selectAll(".bar").remove()
+    d3.selectAll("rect").remove()
 
     // Set X-Axis domain
     var dateMax = d3.max( data, function ( d ) { return d.fechaAsignacion }),
@@ -352,20 +449,23 @@ function plotHistorical( data ) {
     // Scale the range of the data in the y domain
     yHis.domain([0, d3.max(bins, function(d) { return d.length; })])
 
-    bars = svg.selectAll("rect")
-              .data(bins)
+    var bars = svg.selectAll("rect")
+        .data(bins)
 
     // New Data
     bars.enter()
         .append("rect")
         .attr("class", "bar")
-        .attr("x", 1)
-        .attr("transform", function(d) {
-            return "translate(" + xHis(d.x0) + "," + yHis(d.length) + ")" })
+        .attr("x", function(d) {return xHis(d.x0)})
         .attr("width", function(d) { return xHis(d.x1) - xHis(d.x0) -1 })
-        .attr("height", function(d) { return height - yHis(d.length) })
+    	.attr("y", function(d) { return height })
+    	.attr("height", 0)
         .on('mouseover', toolTip.show)
         .on('mouseout', toolTip.hide)
+    	.transition().duration(500)
+    	   .delay(function(d, i) {return i * 20 })
+        .attr("height", function(d) { return height - yHis(d.length) })
+    	.attr("y", function(d) {return yHis(d.length)})
 
     // Update X-Axis
     svg.select("g.x")
@@ -375,6 +475,104 @@ function plotHistorical( data ) {
     // Update Y-Axis
     svg.select("g.y")
        .call(d3.axisLeft( yHis ))
+}
+
+function plotBarsFilter(data) {
+    console.log('Data')
+    console.log(data)
+
+    d3.selectAll("rect").remove()
+
+
+
+    // Set the domains
+    xBar.domain( data.map( function ( d ) { return d.judgeFullName }))
+    yBar.domain( [0, d3.max( data, function( d ) { return d.values })])
+
+    var x0 = d3.scaleBand()
+	.rangeRound([0,xBar.bandwidth()])
+	.paddingInner(0.1)
+	.domain(['Kirchnerismo', 'Macrismo'])
+
+    var z = d3.scaleOrdinal()
+	.domain(['Kirchnerismo', 'Macrismo'])
+	.range(["steelblue", "#FFF60D"])
+
+    // Append the rectangles for the bar chart
+    var bars = svg.selectAll("rect")
+        .data(data)
+
+    bars.exit()
+        .transition()
+            .duration(800)
+        .attr("y", height)
+        .attr("height", 0)
+        .remove();
+
+    // New data
+    bars.enter()
+        .append("rect")
+        //.attr("class", "bar")
+        .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+        .attr("y", height )
+        .attr("width", xBar.bandwidth() / 2)
+        .attr("height", 0)
+	.attr("fill", function(d) { return z(d.key); })
+        .attr("transform", function(d) { return "translate(" + x0(d.key) + ",0)"; })
+        .on('mouseover', toolTip.show)
+        .on('mouseout', toolTip.hide)
+        .transition()
+		    .duration(800)
+            .delay(function (d, i) { return i * 100 })
+        .attr("y", function( d ) { return yBar( d.values ) })
+		.attr("height", function( d ) { return  height - yBar( d.values ) })
+
+    // Update
+    bars
+        .attr("x", function( d ) { return xBar( d.judgeFullName ) })
+        .attr("y", height )
+        .attr("width", xBar.bandwidth() / 2)
+        .attr("height", 0)
+	.transition()
+	.duration(800)
+        .delay(function (d, i) { return i * 100 })
+        .attr("y", function( d ) { return yBar( d.values ) })
+	.attr("height", function( d ) { return  height - yBar( d.values ) })
+
+
+    // Set X-Axis
+    svg.select("g.x")
+        .call(d3.axisBottom(xBar))
+        .selectAll(".tick text")
+        .call(wrap, xBar.bandwidth())
+
+    // Set Y-Axis
+    svg.select("g.y")
+        .transition()
+        .duration(500)
+        .call(d3.axisLeft(yBar))
+
+var legend = svg.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 10)
+      .attr("text-anchor", "end")
+    .selectAll("g")
+    .data(['Kirchnerismo', 'Macrismo'])
+    .enter().append("g")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 19)
+      .attr("width", 19)
+      .attr("height", 19)
+      .attr("fill", z);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9.5)
+      .attr("dy", "0.32em")
+      .text(function(d) { return d; });
+
 }
 
 
@@ -415,3 +613,39 @@ function wrap(text, width) {
         }
     })
 }
+
+
+var uniqueCrimes = ['Delitos contra las personas',
+       'Delitos contra la propiedad',
+       'Delitos contra el estado civil', 'Delitos contra la fé pública',
+       'Ley de Estupefacientes', 'Delitos contra la seguridad pública',
+       'Delitos contra la libertad', 'Ley de Abastecimiento',
+       'Delitos contra la Administración Pública',
+       'Ley de Marcas y Designaciones', 'Ley Antidiscriminatoria',
+       'Ley de Servicios de Comunicaciones Móviles',
+       'Ley Penal Tributaria', 'Delitos contra el orden público',
+       'Modificación de la ley de Identidad Personal',
+       'Delitos contra la integridad sexual', 'Ley de Migraciones',
+       'Ley de Residuos Peligrosos', 'Delitos contra la libertad ',
+       'Ley de patentes de invención y modelos de utilidad',
+       'Régimen legal de la propiedad intelectual',
+       'Conservación de la fauna',
+       'Delitos contra los poderes públicos y el orden constitucional',
+       'Ley de profilaxis',
+       'Delitos contra el orden económico y financiero',
+       'Protección del patrimonio arqueológico y paleontológico',
+       'Régimen penal aduanero', 'Delitos contra el honor',
+       'Código Electoral Nacional', 'Servicio de comunicaciones móviles',
+       'Delitos contra la seguridad de la Nación', 'Extradición',
+       'Riesgos del trabajo', 'Espionaje, sabotaje y traición',
+       'Régimen penal cambiario', 'Régimen penal tributario',
+       'Impedimento de contacto', 'Ley de Sangre',
+       'Ley de trabajo a domicilio',
+       'Ley de Seguridad Nacional - Subversión económica y otras',
+       'Ley de defensa nacional', 'Ley de espionaje, sabotaje y traición',
+       'Ley de defensa de la competencia (abrogada)',
+       'Ley de defensa del consumidor', 'Ley del deporte',
+       'Ley de procedimientos fiscales',
+       'Ley de protección integral a las mujeres',
+       'Incumplimiento de deberes de asistencia familiar',
+       'Ley de protección integral de las niñas, niños y adolescentes']

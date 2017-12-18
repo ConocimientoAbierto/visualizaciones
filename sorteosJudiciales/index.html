@@ -9,6 +9,9 @@
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
+        <!-- -->
+        <link rel="stylesheet"
+        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Personal CSS -->
         <link rel="stylesheet" href="css/main.css" />
     </head>
@@ -34,39 +37,33 @@
                 <h2>Introduccion</h2>
                 <p>
                     En Argentina, todas las denuncias que generan una causa en la
-                    justicia federal se sortean a través de un programa informático,
-                    para determinar el juzgado que investigará la causa.
-                    Este sorteo, según el Poder Judicial, debería ser
-                    <a href="http://www.cij.gov.ar/nota-9277-La-C-mara-Federal-reglament--un-nuevo-sistema-para-la-adjudicaci-n-de-causas.html">“automático e igualitario”</a>,
-                    con el fin de garantizar una investigación independiente de
-                    los intereses de las partes involucradas y de minimizar posibles
-                    influencias en el curso de la investigación.
+                    justicia federal se sortean a través de un programa informático
+                    para determinar el juzgado que investigará la causa. Este sorteo,
+                    según el Poder Judicial, debería ser
+                    <a href="http://www.cij.gov.ar/nota-9277-La-C-mara-Federal-reglament--un-nuevo-sistema-para-la-adjudicaci-n-de-causas.html" target="_blank">“automático e igualitario”</a> ,
+                     con el fin de garantizar una investigación independiente de
+                     los intereses de las partes involucradas y de minimizar posibles
+                     influencias en el curso de la investigación.
 		        </p>
                 <p>
-                    Sin embargo, la aleatoriedad e independencia de este sistema de
-                    sorteos ha sido frecuentemente cuestionada. Casos como el
-                    sorteo de la <a href="http://www.perfil.com/politica/nuevas-evidencias-demuestran-que-el-sorteo-de-los-jueces-se-podia-manipular.phtml">causa Nisman</a>
-                    y los sorteos de <a href="http://www.lanacion.com.ar/2064601-investigan-irregularidades-en-los-sorteos-judiciales">subastas judiciales</a>
-                    generan sospechas sobre posibles manipulaciones e irregularidades
-                    en en el sistema informático que asigna los casos a los juzgados.
+                    Sin embargo, la aleatoriedad e independencia de este sistema
+                    de sorteos ha sido frecuentemente cuestionada. Casos como el
+                    sorteo de la <a href="http://www.perfil.com/politica/nuevas-evidencias-demuestran-que-el-sorteo-de-los-jueces-se-podia-manipular.phtml" target="_blank">causa Nisman</a>
+                    y los sorteos de <a href="http://www.lanacion.com.ar/2064601-investigan-irregularidades-en-los-sorteos-judiciales" target="_blank">subastas judiciales</a>
+                     generaron sospechas sobre posibles manipulaciones e irregularidades
+                     en en el sistema informático que asigna los casos a los juzgados.
+                     Debido a estas sospechas, la jueza Servini de Cubría se
+                     encuentra actualmente investigando el sistema informático
+                     y sus posibles falencias.
                 </p>
                 <p>
                     Este proyecto busca analizar, a través de los datos oficiales
-                    del poder judicial, si las causas federales son verdaderamente
-                    distribuídas de manera equitativa y aleatoria entre todos
-                    los juzgados. Asimismo, el proyecto hace foco en la distribución
-                    de causas de corrupción, las cuales se sospecha son más
-                    vulnerables a potenciales manipulaciones.
-                </p>
-                <p>
-                    La idea inicial de este análisis surgió durante los hackatones
-                    del Media Party y el DataCamp OGP 2017. Este proyecto cuenta
-                    con el apoyo de la Asociación Civil por la Igualdad y la
-                    Justicia (ACIJ) y la Fundación Conocimiento Abierto, y fue
-                    hecho posible gracias al trabajo de: Franco Bellomo, Marcelo Giullitti,
-                    Lucia He, Daniela Picciotto, Lucas Bellomo, Xavier Gonzalez, Isaac Turquie,
-                    Sebastián Sorribas, Federico Gaitan, Juan Manuel García,
-                    Martin Alalu, Andrés Snitcosfsky.
+                    del poder judicial publicados desde julio del 2013 hasta
+                    diciembre del 2017, si las causas federales son verdaderamente
+                    distribuídas de manera equitativa y aleatoria entre todos los
+                     juzgados. Asimismo, el proyecto hace foco en la distribución
+                     de causas de corrupción, las cuales se sospecha son más
+                     vulnerables a potenciales manipulaciones.
                 </p>
             </div><!--/box -->
 
@@ -108,7 +105,6 @@
                             <div class="step slide">
                                 <h2>Diferencia en la corrupcion</h2>
                                 <p>
-				  SPAM
                                 </p>
                             </div><!--/step -->
 
@@ -116,17 +112,26 @@
                             <div class="step slide">
                                 <h2>Historico</h2>
                                 <p>
-                                    SPAM SPAM (si, me gusta monty python)
                                 </p>
                             </div><!--/step -->
 
-			    <!-- Slide 5 -->
+			                <!-- Slide 5 -->
                             <div class="step slide">
                                 <h2>Con filtro</h2>
-                                <p>
-                                  Este gráfico contiene todos los datos de los sorteos de causas.
-				  Los filtros permiten buscar los sorteos a partir de fechas y/o tipo de delito.
-                                </p>
+
+                                <div class="slideBody">
+                                    <p>
+                                      Este gráfico contiene todos los datos de
+                                      los sorteos de causas. Los filtros permiten
+                                      buscar los sorteos por tipo de delito dividiendo
+                                      en el periodo de presidencia de Cristina Fernández de Kirchner
+                                      y Mauricio Macri.
+                                    </p>
+
+                                    <select name="text" id="crimeInput">
+                                        <option value="todos">Todos</option>
+                                    </select>
+                                </div><!--/slideBody -->
                             </div><!--/step -->
 
                         </div><!--/#steps -->
@@ -140,12 +145,104 @@
             </div><!--/#infographic -->
         </section>
 
+        <section class="container">
+            <h2>Aclaraciones técnicas</h2>
+            <br />
+            <h3>Datos</h3>
+            <ol>
+                <li>
+                    Trabajamos con los datos publicados en la web del Centro de Información Judicial (http://www.cij.gov.ar/) acerca de los sorteos de salas de causas judiciales en lo Criminal y Correccional Federal desde julio de 2013 hasta diciembre de 2017.
+                </li>
+                <li>
+                    Contamos con más de 32.900 sorteos de causas judiciales correspondientes a la Cámara Nacional en lo Criminal y Correccional Federal y casi 300 sorteos de causas de corrupción.
+                </li>
+                <li>
+                    Para este análisis sólo utilizamos las causas donde el motivo de asignación fue por sorteo, descartando las causas donde el motivo de asignación fuera por cambio de asignación o incompatibilidad.
+                </li>
+            </ol>
+
+            <h3>Sistema de sorteos</h3>
+            <p>
+                A través de consultas directas con representantes del CIJ, realizamos un relevamiento de las reglas que se implementan en el algoritmo para sortear las causas. Se puede acceder a las reglas en este documento.
+            </p>
+
+            <h3>Causas de corrupción</h3>
+            <ol>
+                <li>
+                    Las causas identificadas como causas de corrupción son designadas de esta manera por la propia corte, basándose en estándares propios.
+                </li>
+                <li>
+                    Las causas de corrupción que están en el observatorio de corrupción del CIJ son las que cada uno de los juzgados identifica como causas de corrupción (no lo hace automáticamente el sistema) en virtud de criterios predefinidos por la corte misma. Por lo tanto, el universo de causas de corrupción puede ser mayor al registrado en el sistema  y que utilizamos para hacer este análisis.
+                </li>
+            </ol>
+
+            <h3>Créditos</h3>
+            <p>
+                La idea inicial de este análisis surgió durante los hackatones del Media Party y el DataCamp OGP 2017. Este proyecto cuenta con el apoyo de la Asociación Civil por la Igualdad y la Justicia (ACIJ) y la Fundación Conocimiento Abierto, y fue hecho posible gracias al trabajo y la colaboración de: Franco Bellomo, Marcelo Giullitti, Lucia He, Lucas Bellomo, Daniela Picciotto, Xavier Ignacio González, Isaac Turquie, Sebastián Sorribas, Federico Gaitan, Juan Manuel García, Martin Alalu, Andrés Snitcosfsky, y Paula Szewach.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <!-- ====== -->
         <footer>
-            <div class="container">
-                <div class="row">
-                    <h2>Footer</h2>
-                </div><!--/row -->
-            </div><!--/container -->
+        	<section>
+        		<div class="container">
+        			<div class="row">
+        				<div class="col-md-6">
+        					<article class="fca">
+        						<img src="imgs/logofca.png" class="logofca">
+        						<div>
+        							<ul>
+        								<li>
+                                            <a href="mailto:info@fcabierto.org"
+                                               target="_blank"
+                                               class="ion-email"></a>
+                                        </li>
+        								<li>
+                                            <a href= "https://www.facebook.com/Fundacionconocimientoabierto/?timeline_context_item_type=intro_card_work&timeline_context_item_source=1335944606&pnref=lhc"
+                                               target="_blank"
+                                               class="ion-social-facebook"></a>
+                                        </li>
+        								<li>
+                                            <a href="https://twitter.com/OKFNAR"
+                                               target="_blank"
+                                               class="ion-social-twitter"></a>
+                                        </li>
+        							</ul>
+        						</div>
+        					</article>
+        				</div>
+        				<div class="col-md-6">
+        					<article class="acij">
+        						<img src="imgs/ACIJ.png" class="logoacij">
+        						<div>
+        							<ul>
+        								<li>
+                                            <a href="mailto:comunicacion@acij.org.ar"
+                                               target="_blank"
+                                               class="ion-email"></a>
+                                        </li>
+        								<li>
+                                            <a href="https://www.facebook.com/ACIJ.ORG"
+                                               target="_blank"
+                                               class="ion-social-facebook"></a>
+                                        </li>
+        								<li>
+                                            <a href="http://twitter.com/ACIJargentina"
+                                               target="_blank"
+                                               class="ion-social-twitter"></a>
+                                        </li>
+        							</ul>
+        						</div>
+        					</article>
+        				</div>
+        			</div><!--/row -->
+        		</div><!--/container -->
+        	</section>
+
+        	<section class="lic">
+          		<img src="imgs/creativecommons.png" class="licencia">
+        	</section>
         </footer>
 
         <!-- JS script -->
