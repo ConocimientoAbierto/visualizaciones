@@ -28,6 +28,13 @@ svg.append("g")
 
 svg.append("g")
     .attr("class", "y axis")
+    .append("text")
+    .attr("fill", "#000")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", "0.71em")
+    .attr("text-anchor", "end")
+    .text("Cantidad Causas")
 
 /*
     Set the ranges
@@ -523,7 +530,7 @@ function plotBarsFilter(data) {
         .on('mouseout', toolTip.hide)
         .transition()
 		    .duration(800)
-            .delay(function (d, i) { return i * 100 })
+            .delay(function (d, i) { return i * 50 })
         .attr("y", function( d ) { return yBar( d.values ) })
 		.attr("height", function( d ) { return  height - yBar( d.values ) })
 
