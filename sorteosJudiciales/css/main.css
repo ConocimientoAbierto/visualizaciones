@@ -40,7 +40,7 @@ ol li {
 }
 
 h2, h3 {
-    color: #1ABC9C;
+    color: steelblue;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
@@ -53,7 +53,7 @@ h2::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #fc0053;
+    background: orangered;
     width: 100px;
     height: 5px;
 }
@@ -73,7 +73,7 @@ h3 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100%;
+    height: 80%;
     color: #ffffff;
 }
 
@@ -95,12 +95,12 @@ h3 {
     Article
 *************************************************************/
 .slide {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 120px;
+    padding-bottom: 130px;
 }
 
 .slide h2 {
-    color: #1ABC9C;
+    color: steelblue;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
@@ -113,7 +113,7 @@ h3 {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #fc0053;
+    background: orangered;
     width: 100px;
     height: 5px;
 }

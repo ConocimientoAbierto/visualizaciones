@@ -503,7 +503,7 @@ function plotBarsFilter(data) {
 
     var z = d3.scaleOrdinal()
 	.domain(['Kirchnerismo', 'Macrismo'])
-	.range(["steelblue", "#FFF60D"])
+	.range(["steelblue", "#ffcb0d"])
 
     // Append the rectangles for the bar chart
     var bars = svg.selectAll("rect")
