@@ -1,0 +1,55 @@
+/******************************************************************
+	General
+******************************************************************/
+body {
+	font-family:'Open Sans', sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h1 {
+	font-family: 'Kalam', cursive;
+}
+/******************************************************************
+	Header
+******************************************************************/
+header {
+	background: linear-gradient(to right, #00b3ef 0%, #0076bf 50%, #8bc540 100%);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #fff;
+}
+
+header h1 {
+	font-size: 3.5em;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header p {
+	text-align: justify;
+}
+
+/******************************************************************
+	Tableau
+******************************************************************/
+.tableauPlaceholder {
+	height: 100px;
+	width: 80px;
+}
+/******************************************************************
+	Footer
+******************************************************************/
+footer {
+	background-color: #e6ecf0;
+	padding-bottom: 30px;
+}
+
+footer p {
+	font-size: 1em;
+	text-align: center;
+	padding: 10px;
+}

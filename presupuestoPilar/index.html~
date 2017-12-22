@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Presupuestos Pilar</title>
+
+		<!-- Font -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam:400,700">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"
+					href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+					integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+					crossorigin="anonymous">
+		<!-- Personal css -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<h1>Asignación presupuestaria</h1>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div><!--/container -->
+		</header>
+
+		<!-- 2017 -->
+		<!-- ==== -->
+		<section>
+			<div class="container">
+				<h2>2017</h2>
+
+				<!-- Origen recurso -->
+				<article>
+					<h3>Origen de los recursos</h3>
+					<div class="embed-responsive embed-responsive-4by3">
+						<iframe src="http://tinyurl.com/yczsfe4c"></iframe>
+					</div><!--/embed -->
+				</article>
+
+				<!-- Asignacion -->
+				<article>
+					<h3>Asignación de presupuesto por programa</h3>
+					<div class="embed-responsive embed-responsive-4by3">
+						<iframe src="http://tinyurl.com/yctua2c8"></iframe>
+					</div><!--/embed -->
+				</article>
+
+			</div><!--/container -->
+		</section>
+
+		<!-- 2008 - 2016 -->
+		<section>
+			<div class="container">
+				<h2>2008 - 2016</h2>
+				<h3>Asignación de presupuesto por programa</h3>
+
+				<article>
+					<p>Gastos por año, por programa</p>
+
+					<div class='tableauPlaceholder' id='viz1513976495693' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Gastosporaoporprograma2008-2016&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Gastosporaoporprograma2008-2016&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Gastosporaoporprograma2008-2016&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1513976495693');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				</article>
+
+				<article>
+					<p>Gastos por programa, por año</p>
+					<div class='tableauPlaceholder' id='viz1513602416574' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Gastosporprograma20082016ok&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Gastosporprograma20082016ok&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Gastosporprograma20082016ok&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1513602416574');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				</article>
+			</div><!--/container -->
+		</section>
+
+	<!-- Footer -->
+	<!-- ====== -->
+	<footer>
+		<div class="container">
+			<p>Datos relevados y publicados en el <a href="http://datosabiertos.pilar.gov.ar/home">Portal de Datos Pilar</a></p>
+			<div class="row justify-content-center">
+
+				<div class="col-2">
+					<img src="img/logopilar.png" class="img-fluid rounded float-right"
+					     alt="municipalidad pilar">
+				</div><!-- col -->
+
+				<div class="col-2">
+					<img src="img/fundacion2.png" class="img-fluid rounded float-left"
+							 alt="fundacion conocimiento abierto">
+				</div><!--/col -->
+
+			</div><!--/row -->
+		</div><!--/container -->
+	</footer>
+
+	<!-- Put at the end all the JS -->
+	<!-- ========================= -->
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+					integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+					crossorigin="anonymous"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+					integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+					crossorigin="anonymous"></script>
+	<!-- Boostrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+					integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+					crossorigin="anonymous"></script>
+
+	</body>
+</html>
