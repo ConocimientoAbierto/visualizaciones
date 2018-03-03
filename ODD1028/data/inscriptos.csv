@@ -1,0 +1,421 @@
+marca_temporal,nombre,charla_relampago,ciudad_provincia,profesion,profesion_gral,genero,edad,otro_odd
+2018-02-09 15:43:30.996,Claudia Marcela Casas,,La Plata/Buenos Aires,Empleada Administrativa,Administración,Femenino,50.0,No
+2018-02-09 16:02:57.851,Emiliano Marinozzi,,Rosario Santa Fe,Ingeniero,Ingeniería,Masculino,36.0,No
+2018-02-09 19:25:04.740,Lucas poss,,Capital,Data sales,Data Science,Masculino,38.0,No
+2018-02-10 09:31:48.646,Daniela Puca,,Buenos Aires ,Directora de administración de base de datos y gobierno abierto ,Administración,Femenino,36.0,Si
+2018-02-10 20:58:57.332,Andrea Ramos,,Caba,Licenciada en publicidad,Sociales,Femenino,51.0,No
+2018-02-10 22:51:44.948,Carolina Cueliche,,Buenos Aires,Relaciones Públicas,Sociales,Femenino,31.0,No
+2018-02-11 08:15:05.928,Stella Bin,,CABA,Periodista ,Comunicación y Periodismo,Femenino,48.0,No
+2018-02-11 18:13:17.661,María Mercedes Spinosa,,Caba,Periodista,Comunicación y Periodismo,Femenino,30.0,Si
+2018-02-11 21:27:00.230,Paloma Urtizberea García,,Buenos Aires,Investigadora,Investigación,Femenino,24.0,No
+2018-02-12 08:39:44.139,Agustín Gutierrez,,Buenos Aires,periodista,Comunicación y Periodismo,Masculino,31.0,No
+2018-02-12 14:09:27.207,Martín Mednik,,CABA,Programador,Desarrollador,Masculino,30.0,No
+2018-02-12 17:10:56.605,Laura Mercado,,Cordoba,Editora de contenido,Comunicación y Periodismo,Femenino,33.0,No
+2018-02-13 13:18:26.857,Ezequiel Lorusso,,Buenos Aires,Editor/Realizador Periodístico,Comunicación y Periodismo,Masculino,38.0,No
+2018-02-13 21:39:54.092,Antonela vistalli,,Buenos Aires,Ingeniera,Ingeniería,Femenino,33.0,No
+2018-02-14 16:17:27.708,Adriana Gulisano,,Buenos Aires,Investigador,Investigación,Femenino,49.0,No
+2018-02-14 18:50:18.969,jorge gutierrez,,capital federal,ingeniero en informática,Ingeniería,Masculino,39.0,No
+2018-02-15 17:45:48.232,Emiliano Marinozzi,,Rosario/Santa Fe,Ingeniero,Ingeniería,Masculino,36.0,No
+2018-02-16 13:31:17.166,Verónica Xhardez,,Buenos Aires,Antropóloga. Investigadora.,Investigación,Femenino,41.0,No
+2018-02-17 19:15:04.535,Alejandra De Los Santos,,"Florida, PBA",Politóloga,Sociales,Femenino,34.0,No
+2018-02-19 09:05:02.349,HORACIO JOSE CASTELLARO,Sí,Buenos Aires,"Geógrafo, empleado público",Administración,Masculino,37.0,No
+2018-02-19 09:12:28.237,Valeria Balducci,No,"Vicente López, Prov. de Buenos Aires","Comunicación y Vínculo Ciudadano, Ingresos Públicos",Administración,Femenino,46.0,Si
+2018-02-19 09:17:21.404,sofia kowal,No,CABA,Estudiante de comunicación,Comunicación y Periodismo,Femenino,23.0,Si
+2018-02-19 09:23:07.809,Juan Manuel Dócile,No,CABA,Sistemas,Sistemas,Masculino,40.0,Si
+2018-02-19 09:26:40.498,Marcelo Medina,No,CABA,Lic. Administración,Administración,Masculino,37.0,No
+2018-02-19 09:30:07.183,Gustavo Rivera ,No,caba,periodismo,Comunicación y Periodismo,Masculino,30.0,No
+2018-02-19 09:37:37.679,Romina Pontiroli,No,Caba,Ingeniera en Informatica,Ingeniería,Femenino,30.0,No
+2018-02-19 09:41:00.908,Juan Pablo Abdala,No,"Lobos, Buenos Aires",Director General de Modernización,Otros,Masculino,43.0,Si
+2018-02-19 09:42:18.035,Norman Perrin,No,CABA,Desarrollador freelance,Desarrollador,Masculino,23.0,Si
+2018-02-19 09:42:25.419,Alfredo Horoch,Sí,"Lanús, Buenos Aires",Software Developer,Desarrollador,Masculino,63.0,Si
+2018-02-19 09:43:22.728,Cristián Parodi,Sí,CABA,Emprendedor social (educación),Sociales,Masculino,53.0,Si
+2018-02-19 09:43:36.550,Federico Álvarez,No,Ciudad de Buenos Aires,Comunicador Social,Comunicación y Periodismo,Masculino,27.0,Si
+2018-02-19 09:50:51.027,Cecilia Vittar,No,Cordoba,Comunicador,Comunicación y Periodismo,Femenino,37.0,No
+2018-02-19 09:55:55.088,Priscila Listello Molinero,No,Córdoba,Comunicadora social,Comunicación y Periodismo,Femenino,32.0,No
+2018-02-19 10:00:38.934,Florencia Alvarez,No,Buenos Aires,Lic en Relaciones Internacionales,Sociales,Femenino,32.0,No
+2018-02-19 10:03:01.111,Federico Carrizo,Sí,"Buenos Aires, CABA",Desarrollador,Desarrollador,Masculino,28.0,No
+2018-02-19 10:08:40.773,Guillermo Villamayor,No,Lanús,Ing Sistemas,Ingeniería,Masculino,58.0,No
+2018-02-19 10:11:03.106,Fernando Manjarin,No,CABA,Ing en Sistemas,Ingeniería,Masculino,34.0,No
+2018-02-19 10:19:34.039,Viviana Fernández,No,Buenos Aires,Lic. Relaciones Internacionales,Sociales,Femenino,32.0,No
+2018-02-19 10:33:05.788,Antonela Amigo Giri ,No,CABA ,Administrativa  ,Administración,Femenino,33.0,Si
+2018-02-19 10:34:43.120,Luciano Brom,No,CABA,Sociólogo,Sociales,Masculino,39.0,Si
+2018-02-19 10:45:16.460,Mauro Moretti,No,Buenos Aires,Empresario,Consultor,Masculino,41.0,No
+2018-02-19 10:48:41.314,Damian Profeta,No,Ciudad de Buenos Aires,Periodista,Comunicación y Periodismo,Masculino,40.0,Si
+2018-02-19 10:57:36.195,Bruno Cataldi,No,Tigre,Analista de Sistemas,Sistemas,Masculino,32.0,Si
+2018-02-19 10:58:13.276,Mirta Praino,Sí,"San Fernando, Prov. Buenos Aires","Asesora Legislativa, OGov-SmartCity",Administración,Femenino,60.0,Si
+2018-02-19 11:02:20.897,Andres Sanchez,No,Buenos Aires,Consultor,Consultor,Masculino,31.0,Si
+2018-02-19 11:05:36.970,Mariana San Martín ,,Caba,Socióloga ,Sociales,Femenino,34.0,No
+2018-02-19 11:08:51.837,Franco Marcucci,No,CABA,Estudiante,Estudiantes,Masculino,24.0,Si
+2018-02-19 11:10:16.570,Sebastian Felix,,CABA,Consultor,Consultor,Masculino,40.0,Si
+2018-02-19 11:20:32.890,Facundo Iriarte,No,Palpala,Lic. en CINE y TV,Comunicación y Periodismo,Masculino,38.0,No
+2018-02-19 11:23:55.539,Puca Daniela ,Sí,La Plata,Directora de administración de base de datos y gobierno abierto,Administración,Femenino,36.0,Si
+2018-02-19 11:40:34.527,Manuel Acevedo Ruiz,No,CABA,Consultor,Consultor,Masculino,54.0,Si
+2018-02-19 11:45:03.366,alfredo swier,No,bsas caba,analista,Sistemas,Masculino,49.0,No
+2018-02-19 11:57:13.937,Mara Leguizamón,No,Provincia de Buenos Aires,Economista,Sociales,Femenino,32.0,No
+2018-02-19 12:01:47.281,veronica corti,,Buenos Aires,Coach y Psicopedagoga,Sociales,Femenino,54.0,No
+2018-02-19 12:24:08.209,Yuly Infante López,No,La Plata/ Buenos Aires,Ingeniera Catastral y Geodesta,Ingeniería,Femenino,31.0,No
+2018-02-19 12:52:38.515,Andrea Raquel Castillo,No,Ciudad Autónoma de Buenos Aires,Abogada,Abogado,Femenino,46.0,Si
+2018-02-19 13:21:42.356,Susana Darin,,CABA,"Directora Ejecutiva de IDEAR,  Directora de Investigacion CAETI, Secretaria Tecnica Facultad de TI UAI",Investigación,Femenino,50.0,No
+2018-02-19 13:27:21.373,Leonor Rodrigo,No,Buenos Aires,Analista de Sistemas,Sistemas,Femenino,54.0,No
+2018-02-19 13:32:10.155,María Fernanda Araujo,,CABA,POLITOLOGA,Sociales,Femenino,43.0,Si
+2018-02-19 14:29:25.917,nicole ulman,No,la plata,comunicadora social,Comunicación y Periodismo,Femenino,21.0,No
+2018-02-19 14:34:06.862,Rafael Lucas Gay,No,Martin Coronado,Data Scientist,Data Science,Masculino,37.0,Si
+2018-02-19 15:05:49.474,emilia espindola,No,Córdoba,Diseñadora UX,Desarrollador,Femenino,34.0,No
+2018-02-19 15:07:24.658,José Eduardo Miranda Valderrama,No,Catamarca,Estudiante de Física y Astronomía,Estudiantes,Masculino,18.0,No
+2018-02-19 15:23:02.326,Luis Sotomayor,No,Buenos Aires,Comunicador social,Comunicación y Periodismo,Masculino,43.0,Si
+2018-02-19 15:26:02.560,Julio Locatelli,No,CABA,Analista funcional de sistemas,Sistemas,Masculino,51.0,No
+2018-02-19 15:27:59.344,Gabriela Simes,No,Quilmes / Buenos Aires,Ingeniera,Ingeniería,Femenino,46.0,No
+2018-02-19 15:45:29.349,Ariel Aizemberg,No,CABA,Lic. en Cs de la Computación,Ingeniería,Masculino,51.0,Si
+2018-02-19 16:30:40.126,Soledad Arréguez Manozzo,No,Lomas de Zamora / Buenos Aires,Periodista,Comunicación y Periodismo,Femenino,29.0,Si
+2018-02-19 16:39:13.565,Paula Romulo,,Caba ,Abogada ,Abogado,Femenino,47.0,Si
+2018-02-19 16:40:03.589,Daniela Rovina,No,Buenos Aires,Periodista,Comunicación y Periodismo,Femenino,29.0,No
+2018-02-19 18:44:50.569,Leonardo Javier Belen,No,Buenos Aires,Abogado,Abogado,Masculino,39.0,Si
+2018-02-19 18:48:58.310,Jennifer Almendras,No,Lomas de Zamora/Buenos Aires,Periodista,Comunicación y Periodismo,Femenino,26.0,No
+2018-02-19 18:54:45.693,Hernan Javier Lopez,No,Buenos Aires,Sistemas,Sistemas,Masculino,46.0,No
+2018-02-19 20:02:29.556,Raul E Lopez Briega,No,CABA,Consultor,Consultor,Masculino,36.0,No
+2018-02-20 00:32:18.456,Leonardo Maddio,No,Buenos Aires,Desarrolador web,Desarrollador,Masculino,25.0,No
+2018-02-20 01:04:08.559,Eduardo Mejías,No,CABA,Estudiante de Periodismo ,Estudiantes,Masculino,25.0,No
+2018-02-20 11:25:30.978,Marcos Sader,No,Córdoba,␀,Otros,Masculino,31.0,No
+2018-02-20 11:34:46.830,Antonio Milannese,No,CABA,Consultor,Consultor,Masculino,37.0,Si
+2018-02-20 11:42:57.284,Xavier Petit,No,CABA,Analisista TI,Sistemas,Masculino,30.0,No
+2018-02-20 12:01:51.417,Estefania Disalvo,No,Olavarria,Ingeniera Industrial,Ingeniería,Femenino,30.0,No
+2018-02-20 12:38:42.284,Lucia He,Sí,CABA,Periodista,Comunicación y Periodismo,Femenino,25.0,No
+2018-02-20 12:44:07.598,Federico Bayle,Sí,Buenos Aires,Data scientist,Data Science,Masculino,29.0,Si
+2018-02-20 12:54:44.957,Juan Ignacio Belbis,Sí,CABA,Consultor,Consultor,Masculino,32.0,Si
+2018-02-20 15:03:05.110,Germán Rosati,Sí,CABA,"Sociólogo, Data Scientist, docente",Data Science,Masculino,35.0,No
+2018-02-21 03:10:18.059,Celeste Fernandez,No,Buenos Aires,Abogada,Abogado,Femenino,28.0,No
+2018-02-21 10:59:46.844,Mariela Nerome,No,CABA,Socióloga,Sociales,Femenino,34.0,No
+2018-02-21 11:18:36.710,Diana Yunusova,No,Buenos Aires,periodista,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-21 11:28:23.035,Leticia Raihue Alunmine Spinosa,No,Moreno,Periodista,Comunicación y Periodismo,Femenino,28.0,No
+2018-02-21 11:32:01.292,mercedes cavalcante,,cap federal,Productor ,Comunicación y Periodismo,Femenino,47.0,No
+2018-02-21 11:36:19.733,Lucía Ilari,No,Buenos Aires,Profesora de Comunicación ,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-21 11:53:52.125,Alan Roges,No,Turdera,Lic en Periodismo,Comunicación y Periodismo,Masculino,27.0,No
+2018-02-21 12:09:12.669,Florencia Victoria Vassallo,No,Sevilla,Economista,Sociales,Femenino,35.0,No
+2018-02-21 12:15:57.050,Leandro Gabriel Casas,No,La Plata / Buenos Aires,Desarrollador de Software / Lider tecnico,Desarrollador,Masculino,27.0,No
+2018-02-21 12:22:37.364,Maximiliano de la Puente,No,Buenos Aires,Profesor,Sociales,Masculino,42.0,No
+2018-02-21 12:54:12.845,Leandro Doctors,No,San Juan,Informático,Ingeniería,Masculino,36.0,Si
+2018-02-21 12:56:19.880,Alejandra de Antoni,No,CABA,Licenciada en Lengua Inglesa - Diplomada en Gestión Legislativa,Administración,Femenino,29.0,No
+2018-02-21 13:03:20.994,Pablo Fernandez,No,CABA,Lic. en Comercialización,Otros,Masculino,37.0,No
+2018-02-21 13:12:39.588,Renzo antonioi,No,Buenos aires,Data sciencie,Data Science,Masculino,43.0,No
+2018-02-21 13:20:38.586,Lucas Capdevila,No,Córdoba,Especialista en innovación,Otros,Masculino,35.0,No
+2018-02-21 13:20:51.914,Ignacio Fernández ,No,Córdoba,Estudiante,Estudiantes,Masculino,32.0,No
+2018-02-21 13:22:55.622,Sol Brero,No,Buenos Aires,BI Lead,Data Science,Femenino,40.0,No
+2018-02-21 13:24:09.180,Guerreiro Chavier,No,"Vicente Lopez, Buenos Aires",Directora de Arte,Comunicación y Periodismo,Femenino,41.0,No
+2018-02-21 13:24:56.232,Cecilia Quinones,No,CABA,contadora,Otros,Femenino,37.0,No
+2018-02-21 13:25:22.182,laura echezarreta,No,caba,prensa y marketing digital,Comunicación y Periodismo,Femenino,45.0,No
+2018-02-21 13:33:34.277,Mercedes Larosa,No,capital federal,Comunicadora,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-21 13:37:59.179,Ignacio Javier Mermet,No,Lomas de Zamora,Desarrollador de software,Desarrollador,Masculino,22.0,No
+2018-02-21 13:39:24.216,Fabiola Bascuñan,No,CABA,Formadora en TICs,Sociales,Femenino,36.0,No
+2018-02-21 13:40:53.068,Marianela Milanes,No,Caba,Politóloga ,Sociales,Femenino,29.0,No
+2018-02-21 13:41:45.185,Gissel Acosta,No,Buenos Aires,Antropóloga,Sociales,Femenino,27.0,No
+2018-02-21 13:44:50.252,Leonardo Centurión ,No,Buenos Aires ,Estudiante,Estudiantes,Masculino,17.0,No
+2018-02-21 13:44:59.331,Lucas Hernan Minutella,No,Tres de Febrero / Buenos Aires,Project Manager,Administración,Masculino,26.0,No
+2018-02-21 13:49:51.919,Candela Moscoso,No,Caba,Comunicadora Social,Comunicación y Periodismo,Femenino,26.0,No
+2018-02-21 13:52:38.843,Josefina Marti,No,Córdoba,Periodista,Comunicación y Periodismo,Femenino,23.0,No
+2018-02-21 13:52:49.671,Diego Torres Dho,No,CABA,Licenciado en Sistemas,Sistemas,Masculino,45.0,No
+2018-02-21 13:56:39.057,Ariel Vergara,No,CABA,Desarrollador,Desarrollador,Masculino,23.0,No
+2018-02-21 13:58:23.573,Mauricio Villalba,No,Buenos Aires,IT ,Sistemas,Masculino,25.0,No
+2018-02-21 13:59:08.421,Lorena Azurmendi,No,Ciudad de Buenos Aires,"Sociologia, analista UX ",Desarrollador,Femenino,37.0,No
+2018-02-21 14:03:15.259,Martin Gersbach,Sí,CABA,Lic Comunicacion,Comunicación y Periodismo,Masculino,50.0,No
+2018-02-21 14:03:55.215,Juan Martin Guerra,No,Capital Federal,ESTUDIANTE,Estudiantes,Masculino,25.0,No
+2018-02-21 14:09:06.898,pablo manzell,Sí,caba,periodista,Comunicación y Periodismo,Masculino,50.0,No
+2018-02-21 14:10:57.778,Jean Paul Gutierrez Torres,No,Buenos Aires,Estudiante.,Estudiantes,Masculino,26.0,No
+2018-02-21 14:13:12.466,Paola Bogotá,No,CABA,Comunicadora Social,Comunicación y Periodismo,Femenino,27.0,No
+2018-02-21 14:18:27.244,Paloma Urtizberea Garcia,Sí,Buenos Aires,Estudiante/Investigadora,Estudiantes,Femenino,24.0,No
+2018-02-21 14:25:49.063,Micalea Diaz,No,Ciudad Autónoma de Buenos Aires,Diseñadora de moda,Sociales,Femenino,28.0,No
+2018-02-21 14:31:46.552,Cecilia Bialuski,No,Buenos Aires,QA Analyst,Data Science,Femenino,36.0,No
+2018-02-21 14:43:37.932,Ernesto Souza,No,Marcos Paz,Estudiante,Estudiantes,Masculino,23.0,Si
+2018-02-21 14:43:46.275,Irina Braun,,Buenos Aires ,Relaciones Institucionales,Sociales,Femenino,42.0,Si
+2018-02-21 14:56:31.455,Emmanuel Valdez,No,Buenos Aires,Administrativo,Administración,Masculino,32.0,No
+2018-02-21 14:56:50.387,Marilina Santero,Sí,Buenos Aires,médica,Otros,Femenino,29.0,No
+2018-02-21 14:57:53.552,Carolina Prado,Sí,buenos aires,médica,Otros,Femenino,31.0,No
+2018-02-21 14:59:26.203,MARIA AMELIA SUAREZ,No,San Fernando,emprendedora- org soc,Otros,Femenino,40.0,No
+2018-02-21 15:01:14.226,Carolina di palma ,No,Caba ,Comunicación ,Comunicación y Periodismo,Femenino,42.0,No
+2018-02-21 15:07:54.949,Cristian Páez,No,Buenos Aires,Operador GIS,Data Science,Masculino,45.0,No
+2018-02-21 15:40:28.718,Paula Ledesma,No,Partido de Tigre,Capacitadora docente,Sociales,Femenino,42.0,No
+2018-02-21 15:41:35.938,Cintia Soldatich,No,"Almagro, CABA",Periodista,Comunicación y Periodismo,Femenino,33.0,No
+2018-02-21 15:41:42.163,maria soledad gonzalo,No,buenos aires,comunicadora social,Comunicación y Periodismo,Femenino,33.0,No
+2018-02-21 15:50:07.642,Cecilia Varela,No,Buenos Aires,Jefe de Operaciones,Otros,Femenino,32.0,No
+2018-02-21 15:54:22.569,Andrea Butera,No,Buenos Aires,Abogada-Desarrolladora Web Full Stack,Abogado,Femenino,41.0,No
+2018-02-21 16:26:30.979,Magalí Haberman,No,C.A.B.A,Lic.en Comunicación Social  ,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-21 16:29:32.761,Vanesa Mizrahi ,No,CABA,Estudiante Data Science,Data Science,Femenino,40.0,No
+2018-02-21 16:32:56.341,Rachel Garcia,No,Buenos Aires,Emprendedora,Otros,Femenino,35.0,No
+2018-02-21 16:33:45.838,Angie Castañeda Gómez,No,Buenos Aires,Ing. Electrónica,Ingeniería,Femenino,27.0,No
+2018-02-21 16:41:25.360,Sebastian Campetella,No,Buenos Aires,Ingeniero en sistemas de información,Ingeniería,Masculino,36.0,No
+2018-02-21 17:08:20.131,Alfredo Horoch,No,"Lanús, Buenos Aires",Software Developer,Desarrollador,Masculino,63.0,Si
+2018-02-21 17:28:00.309,José Jiménez ,No,"Capital Federal, Buenos Aires ",Analista de Customer Experience,Otros,Masculino,28.0,No
+2018-02-21 17:37:15.332,Paula Kiernan,No,Buenos Aires,marketing,Sociales,Femenino,28.0,No
+2018-02-21 17:37:28.073,Ricardo Barbieri,,CABA,Ingeniero,Ingeniería,Masculino,34.0,No
+2018-02-21 17:49:50.738,Noemi Salvatore,No,caba,Analista de Sistemas,Sistemas,Femenino,38.0,No
+2018-02-21 17:51:19.366,rodolfo cardassy,No,C.A.B.A,escritor,Sociales,Masculino,65.0,No
+2018-02-21 17:57:30.748,Manuel Pena,No,Capital Federal,psicólogo,Sociales,Masculino,33.0,No
+2018-02-21 17:58:35.710,Alfredo Chaves,Sí,montevideo,ingeniero,Ingeniería,Masculino,61.0,Si
+2018-02-21 18:04:30.830,Rosario Virasoro,No,Buenos Aires,Comunicaci'on y diseño,Comunicación y Periodismo,Femenino,35.0,No
+2018-02-21 19:09:23.361,Facundo,No,CABA,Analista en Seguridad de la Información,Sistemas,Masculino,46.0,Si
+2018-02-21 19:09:50.761,Mariana Minafro Spinelli,No,Buenos Aires ,Ux Research,Desarrollador,Femenino,31.0,No
+2018-02-21 19:10:13.219,Mariela Ramos Corvalan,No,Buenos Aires,estudiante de sociología,Sociales,Femenino,28.0,No
+2018-02-21 19:13:20.949,Mariana Minafro Spinelli,No,Bsas,Ux Research ,Desarrollador,Femenino,31.0,No
+2018-02-21 19:28:33.072,luis Cafferata,No,caba,Consultor It,Data Science,Masculino,55.0,No
+2018-02-21 19:29:02.957,Florysol Suarez,No,Caba,Comunicadora Social ,Comunicación y Periodismo,Femenino,48.0,No
+2018-02-21 19:43:48.179,Julia Rivas,No,Cuidad de Buenos Aires,Archivista,Otros,Femenino,38.0,No
+2018-02-21 19:51:21.909,Matias Marcon,No,Buenos Aires,Estudiante,Estudiantes,Masculino,20.0,No
+2018-02-21 20:10:57.382,Rodolfo A. Rico,No,Buenos Aires,Comunicador,Comunicación y Periodismo,Masculino,43.0,No
+2018-02-21 21:02:32.742,Maria Elena Medina,No,Isidro Casanova,Periodista,Comunicación y Periodismo,Femenino,32.0,No
+2018-02-21 21:35:03.109,Martin Alejandro Rosas,No,Lomas de Zamora,Estudiante,Estudiantes,Masculino,24.0,No
+2018-02-21 22:05:25.624,Alison Depsky,No,Buenos Aires,designer,Comunicación y Periodismo,Femenino,29.0,No
+2018-02-21 22:13:32.022,andres Snitcofsky,Sí,Ciudad de Buenos Aires,diseñador,Comunicación y Periodismo,Masculino,35.0,Si
+2018-02-21 23:39:21.311,Marializ Ramírez ,No,Buenos Aires ,Periodista ,Comunicación y Periodismo,Femenino,24.0,No
+2018-02-21 23:55:30.309,SEBASTIAN ARIEL BEVACQUA,No,MORON / BUENOS AIRES,Software Developer,Desarrollador,Masculino,26.0,Si
+2018-02-22 00:47:25.616,Ana Bedacarratz,Sí,Buenos Aires,Data Scientist,Data Science,Femenino,31.0,No
+2018-02-22 06:35:32.540,Marco Moreno ,Sí,Capital federal ,Especialista en marketing digital ,Sociales,Masculino,32.0,No
+2018-02-22 08:13:16.355,Liliana Pluis,No,"Martínez, San Isidro,  Buenos Aires",Abogada,Abogado,Femenino,54.0,No
+2018-02-22 08:47:04.548,Greta Gawianski,No,Buenos Aires ,Comunicación,Comunicación y Periodismo,Femenino,23.0,No
+2018-02-22 09:12:30.461,Marisa Miodosky,,Buenos Aires,Politologoa,Sociales,Femenino,40.0,No
+2018-02-22 09:23:14.895,Sol Ozzan,No,CABA,Arquitecta de sistemas,Sistemas,Femenino,22.0,No
+2018-02-22 09:43:13.534,Hernan Goldenberg,No,CABA,Consultor Freelance,Desarrollador,Masculino,45.0,No
+2018-02-22 09:46:40.609,Analia Ramos Corvalan,No,Buenos Aires,Estudiante de Ciencias Antropológicas,Estudiantes,Femenino,28.0,No
+2018-02-22 09:51:56.479,Juan Castrilli,No,Buenos Aires,Arquitecto BigData,Data Science,Masculino,29.0,No
+2018-02-22 09:58:21.542,Stephanie Speranza,Sí,Capital federal,Sociologa,Sociales,Femenino,26.0,No
+2018-02-22 10:27:43.533,Luis Leguizamon,No,CABA,Ingeniero en Sistemas,Ingeniería,Masculino,31.0,No
+2018-02-22 10:39:13.830,Verónica Xhardez,Sí,Buenos Aires,Investigadora - Dra. en Ciencias Sociales,Investigación,Femenino,40.0,No
+2018-02-22 10:41:13.108,Pedro Carballo Heras,No,"La Plata,Buenos Aires",Diseñador de Servicios,Desarrollador,Masculino,24.0,No
+2018-02-22 10:41:29.299,Kenya Guzman,No,CABA,Licenciada en Matematica,Investigación,Femenino,27.0,No
+2018-02-22 10:45:07.420,Mariana Fuente,No,Caba,Comunicadora,Comunicación y Periodismo,Femenino,43.0,No
+2018-02-22 11:08:57.099,Ana Paula Alderete,No,Buenos Aires,Programadora de TV,Comunicación y Periodismo,Femenino,29.0,No
+2018-02-22 11:10:12.932,VAZQUEZ MARCOS LUIS,No,CABA,Periodista,Comunicación y Periodismo,Masculino,36.0,No
+2018-02-22 11:17:08.489,matias tkaczuk,No,buenos aires,periodista,Comunicación y Periodismo,Masculino,22.0,No
+2018-02-22 11:17:09.030,Soledad Represa,Sí,"La Plata, Buenos Aires",Investigadora predoctoral,Investigación,Femenino,32.0,No
+2018-02-22 11:47:47.305,Tomás Drenik,No,CABA,Analista de riesgo de crédito,Data Science,Masculino,28.0,No
+2018-02-22 12:14:06.786,Federico Alberto,No,Buenos Aires,"Diseñador grafico, programador front end",Desarrollador,Masculino,34.0,No
+2018-02-22 12:17:00.318,Francisco Dorr,No,Buenos Aires,Desarrollador,Desarrollador,Masculino,28.0,No
+2018-02-22 12:19:11.001,javier tejerizo,No,caba,funcionario público,Administración,Masculino,33.0,No
+2018-02-22 12:26:03.907,sofia portillo,No,buenos aires ,periodista,Comunicación y Periodismo,Femenino,24.0,No
+2018-02-22 12:42:52.801,Sergio Napolitano,No,"Quilmes, Buenos Aires",Docente,Sociales,Masculino,55.0,No
+2018-02-22 14:00:27.236,Maricel A Lonati,No,Buenos Aires,Politóloga,Sociales,Femenino,32.0,No
+2018-02-22 14:45:04.493,Victoria Sol Caparelli,No,Buenos Aires,Auditora TI,Data Science,Femenino,23.0,No
+2018-02-22 15:03:10.370,Sebastian Trotta,No,Buenos Aires ,Sales and Technical Support,Sistemas,Masculino,38.0,Si
+2018-02-22 15:12:50.105,María Florencia Boero,No,Buenos Aires,Publicista,Sociales,Femenino,24.0,No
+2018-02-22 15:51:19.137,Delfina Fainguersch,Sí,Buenos Aires,Estudiante de bioingeniería,Estudiantes,Femenino,23.0,No
+2018-02-22 15:59:25.388,Ariel Anthieni,No,CABA,Analista de Sistemas,Sistemas,Masculino,35.0,Si
+2018-02-22 17:45:07.333,Susana Darin,No,CABA,"Directora Ejecutiva IDEAR, Miembro Directivo CAETI, Secretaria Tecnica Fac de TI UAI",Otros,Femenino,49.0,No
+2018-02-22 17:56:35.440,Agostina Bellezze ,No,CABA,Comunicadora Social,Comunicación y Periodismo,Femenino,24.0,No
+2018-02-22 18:00:14.224,Alexander Verner,No,CABA,Periodista,Comunicación y Periodismo,Masculino,27.0,Si
+2018-02-22 19:03:05.549,Belén Seco,No,Capital Federal,"Analista de BI, Analytics and Strategy",Data Science,Femenino,27.0,No
+2018-02-22 20:33:14.590,Martin Pellarolo,No,Cordona,Ing. de Sistemas,Ingeniería,Masculino,27.0,No
+2018-02-22 20:51:16.158,Ernesto Surijon Frimis,No,Buenos Aires,Founder DeepData,Data Science,Masculino,50.0,No
+2018-02-22 22:38:33.564,Agustín Vilte,No,La Rioja,Estudiante,Estudiantes,Masculino,20.0,No
+2018-02-23 09:27:34.582,Braian Leiva,No,Florencio Varela,Sysadmin Linux,Sistemas,Masculino,27.0,No
+2018-02-23 09:38:47.957,Sofia Martignetti,No,Buenos Aires,Estudiante,Estudiantes,Femenino,25.0,No
+2018-02-23 10:22:25.474,Luis Hernandez,No,Buenos Aires / Capital Federal,Data Scientist,Data Science,Masculino,30.0,No
+2018-02-23 10:48:38.866,MARTIN Alalu,No,caba,politologo,Sociales,Masculino,30.0,Si
+2018-02-23 10:59:42.267,Cecilia Ciancio,No,"Ciudad Jardín, Buenos Aires",Arquitecta,Sociales,Femenino,26.0,No
+2018-02-23 11:17:28.677,analia hanono,No,caba,urbanista,Sociales,Femenino,31.0,No
+2018-02-23 12:21:12.403,florencia melo,No,buenos aires,periodista,Comunicación y Periodismo,Femenino,27.0,No
+2018-02-23 12:22:16.516,Alejandro Valdivia,No,Lima,Docente,Sociales,Masculino,40.0,No
+2018-02-23 13:01:04.036,Mariana San Martín,Sí,CABA,Socióloga,Sociales,Femenino,34.0,No
+2018-02-23 14:18:16.208,Rodolfo A. Rico,No,Buenos Aires/CABA,Periodista,Comunicación y Periodismo,Masculino,43.0,Si
+2018-02-23 14:19:15.828,Ivan Lose,No,Buenos Aires,Estudiante de ingeniería en sistemas,Estudiantes,Masculino,19.0,No
+2018-02-23 15:43:57.484,César Eduardo Andino,No,Quilmes,Administrador de Sistemas,Sistemas,Masculino,31.0,No
+2018-02-23 16:12:14.662,Victor Catamo,No,Buenos Aires,Desarrollador C#,Desarrollador,Masculino,24.0,No
+2018-02-23 16:14:12.426,Ivanna Zanella,No,Buenos Aires,Ingeniera,Ingeniería,Femenino,31.0,No
+2018-02-23 18:43:35.193,Regina Loustau,Sí,CABA,web developer,Desarrollador,Femenino,32.0,No
+2018-02-23 19:01:26.119,Mariano Ricardo Salguero,No,Acassuso,Sociólogo,Sociales,Masculino,52.0,No
+2018-02-23 20:32:56.946,Gonzalo Isla,No,CABA,Analista de producto,Desarrollador,Masculino,26.0,No
+2018-02-23 23:34:45.716,Rosario Dezeo,No,CABA,Comunicóloga,Comunicación y Periodismo,Femenino,27.0,No
+2018-02-24 02:05:52.131,Patricia estigarribia,No,Caba,Maquetadora,Desarrollador,Femenino,32.0,No
+2018-02-24 08:50:20.659,Paola Prieto,No,Capital Federal,Ingeniera de sistemas,Ingeniería,Femenino,34.0,No
+2018-02-24 18:29:06.153,Mariano Russo,No,buenos aires,analista,Sistemas,Masculino,40.0,Si
+2018-02-24 21:23:28.222,Diego Leonardo Andino,No,Cordoba/Cordoba,Bioinformático,Investigación,Masculino,36.0,No
+2018-02-25 10:20:06.045,Santiago López Belsue,No,Caba,Ingeniero Electrónico,Ingeniería,Masculino,34.0,Si
+2018-02-25 12:58:43.554,Ernesto Esteban Godaly,No,Hurlinghan,Docente,Sociales,Masculino,50.0,No
+2018-02-25 13:11:33.739,Alberto González,No,CABA,Abogado,Abogado,Masculino,28.0,No
+2018-02-25 13:13:22.253,Lucía Ilari ,No,Buenos Aires ,Profesora ,Sociales,Femenino,30.0,No
+2018-02-25 13:14:50.544,Agurtzane Urrutia,Sí,Buenos Aires ,Diseñadora web ,Desarrollador,Femenino,43.0,Si
+2018-02-25 13:55:34.084,José Luis muzikant,No,Caba,Líder técnico java,Desarrollador,Masculino,40.0,No
+2018-02-25 13:55:47.877,Leo Condori,No,Ciudad Autónoma de Buenos Aires,Periodista/Programador,Comunicación y Periodismo,Masculino,37.0,No
+2018-02-25 14:18:24.462,Jimena Cardenas,,Caba,Project Manager,Administración,Femenino,39.0,No
+2018-02-25 14:23:51.826,Claudia Marcela Casas,No,La Plata/Buenos Aires,Administrativa,Administración,Femenino,50.0,No
+2018-02-25 14:40:26.211,JAVIER MALLO,No,CABA,SISTEMAS,Sistemas,Masculino,50.0,No
+2018-02-25 14:43:23.439,Victoria Boccassini,No,Hurlingham,Diseñadora Industrial,Ingeniería,Femenino,33.0,No
+2018-02-25 15:05:39.340,Maximiliano Federico Scocozza Meza,No,Ciudad Autónoma de Buenos Aires,Data science,Data Science,Masculino,28.0,No
+2018-02-25 15:10:20.664,ROMINA ELENA MENDEZ,No,BUENOS AIRES,Licenciada en Sistemas,Sistemas,Femenino,32.0,No
+2018-02-25 15:22:41.874,Brian Litwak,No,Capital,Cientifico de datos,Data Science,Masculino,25.0,No
+2018-02-25 15:51:23.097,Daniel,Sí,Aut De Bsas,Ecpirtador,Otros,Masculino,60.0,No
+2018-02-25 16:19:30.978,Martín del valle,No,Buenos Aires,En proceso,Otros,Masculino,27.0,No
+2018-02-25 16:48:40.138,Francisco Fernández,No,Buenos Aires,Médico,Otros,Masculino,51.0,No
+2018-02-25 17:58:58.741,Diego E. Sánchez,,Cañuelas/Buenos Aires,Periodista,Comunicación y Periodismo,Masculino,28.0,No
+2018-02-25 18:07:49.862,Amilcar Alberino,No,Laferrere,Treine en java,Estudiantes,Masculino,24.0,No
+2018-02-25 20:07:45.774,Franco Marcucci,No,CABA,Estudiante,Estudiantes,Masculino,24.0,Si
+2018-02-25 20:25:05.041,Victoria Bembibre,No,Buenos Aires,Comunicadora,Comunicación y Periodismo,Femenino,32.0,No
+2018-02-25 21:56:08.496,Walter Cipriano,No,CABA,Ingeniero,Ingeniería,Masculino,44.0,No
+2018-02-25 21:57:53.089,Juan Matias Chekherdemian,No,caba,Analista de Sistemas,Sistemas,Masculino,32.0,No
+2018-02-25 22:35:40.386,veronica corti,,Buenos Aires,Psicopedagoga y Coach,Sociales,Femenino,54.0,No
+2018-02-25 22:58:09.786,MAXI COSTANTINIS,Sí,LA PLATA / PROVINCIA,PUBLICISTA,Sociales,Masculino,45.0,No
+2018-02-25 23:24:01.521,Pablo Galván,No,CABA,Ingeniero,Ingeniería,Masculino,37.0,Si
+2018-02-26 02:13:21.453,Augusto Kielbowicz,No,Buenos Aires,Físico,Investigación,Masculino,25.0,No
+2018-02-26 05:27:59.809,Osvaldo Saporiti,No,Capital Federal,Periodista,Comunicación y Periodismo,Masculino,82.0,No
+2018-02-26 06:55:54.071, viviana acevedo,No,cramer 3071,analista de sistemas,Sistemas,Femenino,48.0,No
+2018-02-26 08:50:55.013,Patricio Del Boca,No,Alta Gracia,Analista de Datos,Data Science,Masculino,30.0,No
+2018-02-26 09:26:50.373,Pablo Gabriel Celayes,No,Córdoba,Programador,Desarrollador,Masculino,35.0,No
+2018-02-26 09:30:07.280,Flavia Canelo,No,Buenos Aires,Antropóloga,Sociales,Femenino,37.0,No
+2018-02-26 09:35:19.438,Pablo Gallo,No,Vicente Lopez/BsAs,Politologo,Sociales,Masculino,32.0,Si
+2018-02-26 09:42:49.812,juan britos,No,buenos aires/capital,fotografo,Comunicación y Periodismo,Masculino,50.0,No
+2018-02-26 09:49:51.514,Perez Cristian Martin ,No,Cordoba,Periodista,Comunicación y Periodismo,Masculino,37.0,No
+2018-02-26 09:52:58.951,Evelyn Lara Salvatore,No,Buenos Aires,Editora,Comunicación y Periodismo,Femenino,24.0,No
+2018-02-26 09:55:56.913,Nerina Badalic,No,Ciudad de Buenos Aires,Programadora,Desarrollador,Femenino,25.0,No
+2018-02-26 10:13:50.144,Rodolfo Guillermo Cardassy,No,C.A.B.A.,ESCRITOR,Comunicación y Periodismo,Masculino,65.0,Si
+2018-02-26 10:29:11.632,Cristian Reynaga,No,CABA,Tecnólogo,Otros,Masculino,33.0,Si
+2018-02-26 10:46:23.201,Alberto Valle,Sí,Caba,Empresario,Consultor,Masculino,50.0,No
+2018-02-26 10:48:26.820,Grecia Flores,No,Buenos Aires,Ingeniero de Sistemas,Sistemas,Femenino,30.0,No
+2018-02-26 10:58:07.939,Florencia Silvestre,No,Buenos Aires,Developer,Desarrollador,Femenino,26.0,No
+2018-02-26 11:08:55.331,Ana Bernal,No,CABA,Diseño,Comunicación y Periodismo,Femenino,27.0,No
+2018-02-26 11:13:44.243,DIEGO DA COL,No,CABA,CONSULTOR,Consultor,Masculino,43.0,No
+2018-02-26 11:25:44.610,Pablo Ambrosio,No,Cordoba,Programador,Desarrollador,Masculino,39.0,No
+2018-02-26 11:33:11.191,Dan Zajdband,No,CABA,Programador,Desarrollador,Masculino,28.0,No
+2018-02-26 11:38:07.872,Pamela Lamanna,No,Buenos Aires,Lic. en Comunicación Social,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-26 11:52:05.786,JORGE AVILA,No,BUENOS AIRES,PERIODISTA,Comunicación y Periodismo,Masculino,63.0,No
+2018-02-26 12:08:47.934,gonzalo privitera,Sí,buenos aires,programador,Desarrollador,Masculino,33.0,No
+2018-02-26 12:10:51.908,carlos podesta,Sí,caba,jubilado y periodista,Comunicación y Periodismo,Masculino,81.0,Si
+2018-02-26 12:15:09.789,Carolina Cornejo,No,CABA,POLITÓLOGA,Sociales,Femenino,32.0,Si
+2018-02-26 12:20:59.505,Juan Manuel García,Sí,Ciudad Autónoma de Buenos Aires,"Coordinador de Comunicación y Contenidos en el Programa Justicia Abierta, Ministerio de Justicia y DDHH de la Nación",Comunicación y Periodismo,Masculino,32.0,Si
+2018-02-26 12:32:22.270,Diego aguirre,No,Buenos Aires ,Desarrollador,Desarrollador,Masculino,25.0,No
+2018-02-26 12:42:13.153,Claudio Collado,No,CABA,Ing. Mecanico,Ingeniería,Masculino,33.0,No
+2018-02-26 12:51:39.412,Gustavo Velazco,No,CABA,IT - Ministerio de Transporte de la Nación,Data Science,Masculino,28.0,Si
+2018-02-26 13:06:19.963,Sofia Simiani,No,Buenos Aires,Consultant,Consultor,Femenino,25.0,No
+2018-02-26 13:06:24.711,Daniela Noemi Ávido,No,"Virrey del Pino, Buenos Aires",estudiante de arqueología,Estudiantes,Femenino,32.0,No
+2018-02-26 13:21:45.440,Manuel Acevedo Ruiz,No,Buenos Aires,Consultor,Consultor,Masculino,54.0,Si
+2018-02-26 13:40:06.881,Tomas,No,Buenos aires,Líder de proyectos,Administración,Masculino,28.0,No
+2018-02-26 14:21:43.490,Pablo Casas,Sí,CABA,Abogado,Abogado,Masculino,44.0,No
+2018-02-26 14:25:34.246,Tamara Laznik,No,Buenos Aires,Estudiante de abogacía,Estudiantes,Femenino,25.0,Si
+2018-02-26 14:28:09.137,Ana Inés Dutari,No,CABA,Filosofía,Sociales,Femenino,30.0,No
+2018-02-26 14:38:09.089,Verónica Nina,No,CAPITAL FEDERAL,Estudiante,Estudiantes,Femenino,36.0,No
+2018-02-26 14:40:54.865,Pamela Lamanna,No,Buenos Aires,Lic. en Comunicación Social,Comunicación y Periodismo,Femenino,30.0,No
+2018-02-26 15:05:23.612,Patricia Estigarribia,No,Buenos Aires,Estudiante,Estudiantes,Femenino,33.0,No
+2018-02-26 15:54:14.899,vladimiro bellini,Sí,buenos aires,desarrollo y análisis de datos gis,Data Science,Masculino,37.0,Si
+2018-02-26 16:21:16.265,Carlos Frías,No,Tucumán,Perioldista,Comunicación y Periodismo,Masculino,36.0,No
+2018-02-26 17:21:40.680,Nicolás Grossman,Sí,CABA,Periodista,Comunicación y Periodismo,Masculino,32.0,Si
+2018-02-26 18:13:27.070,Rafael Henrique Cruz de Sousa,No,Caba,Gestor Público,Administración,Masculino,27.0,No
+2018-02-26 18:19:00.017,vladimir avila,No,caballito,ingeniero estadistico,Ingeniería,Masculino,29.0,No
+2018-02-26 18:31:25.041,Gilberto Ramirez,No,Ciudad Autonoma de Buenos Aires,Ing en Sistemas,Sistemas,Masculino,56.0,No
+2018-02-26 18:46:04.312,Marcelo Vitores,No,ciudad de Buenos Aires,arqueólogo,Otros,Masculino,37.0,No
+2018-02-26 18:54:46.115,Malena Libman,Sí,Buenos Aires,Tecnico en Sistemas de Información Geográfica,Sistemas,Femenino,34.0,Si
+2018-02-26 18:55:29.986,Gonzalo Gabriel Perez,Sí,CABA,Desarrollador,Desarrollador,Masculino,32.0,Si
+2018-02-26 19:43:44.561,Claudio Gutman,No,caba,administrador ,Administración,Masculino,53.0,Si
+2018-02-26 19:47:34.746,Alejo di Risio,No,Capital FEderal,Periodista,Comunicación y Periodismo,Masculino,28.0,No
+2018-02-26 20:57:57.603,Florencia Victoria Vassallo,No,CABA,Economista,Sociales,Femenino,35.0,No
+2018-02-26 21:12:35.966,Herlan Baringay Linares,No,capital,Developer,Desarrollador,Masculino,32.0,No
+2018-02-26 21:43:41.173,Alex Ventura,No,Buenos aires,Programador,Desarrollador,Masculino,29.0,No
+2018-02-26 21:49:34.744,ruben oscar diaz,No,buenos aires,Periodista,Comunicación y Periodismo,Femenino,40.0,No
+2018-02-26 22:48:17.909,Pablo Hilaire,No,Caba,Abogado,Abogado,Masculino,31.0,No
+2018-02-26 22:57:12.108,Jorge Gutierrez,No,buenos aires/capital federal,empleado,Administración,Masculino,39.0,No
+2018-02-27 02:47:04.200,Gaston Campagna,No,Buenos Aires,Locutor,Comunicación y Periodismo,Masculino,25.0,No
+2018-02-27 07:41:38.339,Luisana Chejin,No,CABA,Ing. En Sistemas ,Ingeniería,Femenino,25.0,No
+2018-02-27 09:40:01.591,Christian Yazky,No,Hulingham,Developer,Desarrollador,Masculino,33.0,No
+2018-02-27 09:59:33.024,Andrés Castañeda,No,Buenos Aires - CABA,Ingeniero de Sistemas,Sistemas,Masculino,32.0,No
+2018-02-27 10:28:29.606,Arturo Ruarte,No,Buenos Aires,Lic. Sistemas,Sistemas,Masculino,47.0,No
+2018-02-27 10:28:43.642,Macarena Zappe,No,Capital federal,Politóloga,Sociales,Femenino,24.0,No
+2018-02-27 10:29:00.237,Luis Marcelo Rodríguez Aliaga,No,CABA,Data Anlyst,Data Science,Masculino,32.0,No
+2018-02-27 10:43:20.021,Florencia Coelho,No,Buenos aires,Periodismo,Comunicación y Periodismo,Femenino,46.0,Si
+2018-02-27 10:49:31.752,Silvana Pirchi,No,Pergamino - Buenod Aires,Analista Universitario de Sistemas,Estudiantes,Femenino,51.0,No
+2018-02-27 12:14:16.618,Erica Nieves,No,Quilmes,Administrativa,Administración,Femenino,35.0,No
+2018-02-27 12:47:23.243,Ariel seiffer,No,Caba,Profesor tecnico electronica,Ingeniería,Masculino,37.0,No
+2018-02-27 13:07:16.111,Enzo Yune,No,Capital Federal,Informático,Sistemas,Masculino,33.0,No
+2018-02-27 13:20:51.456,Agustin Precci,No,CABA,Licenciado en Turismo,Sociales,Masculino,42.0,No
+2018-02-27 14:39:12.042,Marcelo Alejandro Giullitti Oliva,No,Ciudad Autónoma de Buenos Aires,Abogado,Abogado,Masculino,30.0,No
+2018-02-27 16:50:52.653,Dawook Choi,Sí,CABA,Gerente de ciencia de datos,Data Science,Masculino,26.0,No
+2018-02-27 18:24:01.450,Judith Katz ,No,Capital ,Ing de Sistemas ,Sistemas,Femenino,60.0,No
+2018-02-27 18:27:03.522,Estean Calejman ,No,Capital,IT Mgr,Data Science,Masculino,42.0,No
+2018-02-27 18:58:11.723,Guillermo Varani,No,Vicente Lopez,Docente,Sociales,Masculino,55.0,No
+2018-02-27 21:17:18.501,Andrés López,Sí,San Martín - Buenos Aires,Abogado,Abogado,Masculino,38.0,No
+2018-02-27 22:09:23.497,Juan Manuel Silva Garretón,No,CABA,Desarrollador,Desarrollador,Masculino,28.0,No
+2018-02-28 00:14:27.414,Fernando Ariel López,Sí,CABA,Bibliotecario. Investigador,Investigación,Masculino,37.0,Si
+2018-02-28 02:52:35.638,Mara Destefanis,No,bs as ,emprendedora bigdata,Data Science,Femenino,43.0,No
+2018-02-28 11:30:04.290,Pablo Gonzalez,No,Buenos Aires,Analista,Sistemas,Masculino,39.0,Si
+2018-02-28 12:17:55.852,ivanna zanella,No,capital federal,ingeniera,Ingeniería,Femenino,31.0,No
+2018-02-28 12:24:11.104,Moises Rafael Casakin,No,San Martin,ING en SISTEMAS,Ingeniería,Masculino,64.0,No
+2018-02-28 12:41:12.030,Rodrigo de Pineda y Gualdoni,No,CABA,Docente,Sociales,Masculino,39.0,No
+2018-02-28 18:58:32.417,Rocio Pascual,No,Pergamino,Estudiante,Estudiantes,Femenino,19.0,No
+2018-02-28 19:09:58.836,Paola,No,Buenos Aires,Ingeniera de sistemas,Sistemas,Femenino,34.0,No
+2018-02-28 19:10:08.538,Paola,No,Buenos Aires,Ingeniera de sistemas,Sistemas,Femenino,34.0,No
+,JULIO,,,,,,,
+,Salvador,,TORRES,,,,,
+,Ana,,Castagnino,,,,,
+,Gonzalo,,Costas,,,,,
+,Diana,,Zapata,,,,,
+,jorge,,Rodríguez,,,,,
+,carolina,,tamayo,,,,,
+,Angel,,cardenas,,,,,
+,Diego,,Bono,,,,,
+,Rosa,,Gonzalez,,,,,
+,DANIELA,,Spanto,,,,,
+,diego,,De Sousa Mendes,,,,,
+,Julia,,aguirre,,,,,
+,Nicolás,,Beccaria,,,,,
+,Sebastián,,González,,,,,
+,Alberto Eduardo,,Romani,,,,,
+,Mailén,,Castaño,,,,,
+,sofia,,García,,,,,
+,Augusto,,minissale,,,,,
+,María Emilia,,Kielbowicz,,,,,
+,Javier,,Rey Saravia,,,,,
+,Sebastian,,AZCARATE,,,,,
+,Mauro Andres,,Felix,,,,,
+,Gaston,,Esquenon,,,,,
+,Valeria,,Laterza,,,,,
+,Gonzalo Luis,,Fornieles,,,,,
+,Claudia Marcela,,Criado,,,,,
+,Fernando Ariel,,Casas,,,,,
+,Erica,,Lopez,,,,,
+,Gabriela,,Nieves,,,,,
+,Victoria,,Garcia,,,,,
+,David,,Loisi,,,,,
+,Maria Sofia,,Loisi,,,,,
+,Verónica,,Severio,,,,,
+,daniela,,Xhardez,,,,,
+,Ignacio,,aiscorbe,,,,,
+,Leonardo,,Mermet,,,,,
+,Ariel,,Centurión,,,,,
+,Sergio,,Vergara,,,,,
+,Rox,,Fedi,,,,,
+,Martin Alejandro,,Medina,,,,,
+,Analía,,Rosas,,,,,
+,Juan,,Aspis,,,,,
+,Nicolás,,León,,,,,
+,Lina,,Vergara,,,,,
+,Maria Florencia,,Montoya,,,,,
+,Gabriela Maria,,Vellini,,,,,
+,Gaby,,Romero Dutruel,,,,,
+,Victoria Sol,,Pugliese,,,,,
+,Elisa Veronica,,Caparelli,,,,,
+,Jimena,,Favotti,,,,,
+,jorge,,Fontana,,,,,
+,Jhonattan,,rios,,,,,
+,Julio,,Herrera Gutierrez,,,,,
+,Angel,,Escalante,,,,,
+,Rogelio,,Bono,,,,,
+,Javier,,Gomez,,,,,
+,Lucila,,AZCARATE,,,,,
+,María Inés,,Rodriguez,,,,,
+,Nerina,,Galofre,,,,,
+,Diego,,Badalic,,,,,
+,Lisandro,,Lescano,,,,,
+,Romina,,Carrasco,,,,,
+,Nicolas,,Padula,,,,,
+,Carlos,,Valenzuela,,,,,
+,Florencia Victoria,,Vergara,,,,,
+,HEATH,,Vassallo,,,,,
+,daniela,,STODDART,,,,,
+,Martin,,campal,,,,,
+,Carlos,,Gersbach,,,,,
+,Adriana,,Pavia,,,,,
+,Lucía,,Malpezzi,,,,,
+,Rachel,,De Moraiz,,,,,
+,Ramiro,,Garcia,,,,,
+,Roberto,,Savoie,,,,,
+,matias,,Traber,,,,,
+,Eduardo,,sotelo,,,,,
+,Regina,,Casarero,,,,,
+,Matias,,Loustau,,,,,
+,Raysa,,Rivas,,,,,
+,Agustina,,Alanes,,,,,
+,,,Colantonio,,,,,

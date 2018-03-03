@@ -1,0 +1,75 @@
+/******************************************************
+ Base style
+*******************************************************/
+body {
+	margin: 0;
+	font-family: arial, sans;
+	background-color: #292935;
+}
+
+::after, ::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/******************************************************
+ Plot
+*******************************************************/
+#container {
+  position: relative;
+}
+
+#chart {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#sections {
+  width: 340px;
+}
+
+.step {
+	height: 300px;
+}
+
+.step:first-child {
+	padding-top: 200px;
+}
+
+.step h2 {
+  opacity: 0;
+	color: white;
+	padding-left: 50px;
+	font-size: 2em;
+
+  -webkit-transition: opacity 1s ease-in;
+     -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+       -o-transition: opacity 1s ease-in;
+          transition: opacity 1s ease-in;
+}
+
+.step h2::before {
+	content: '';
+	position: absolute;
+	background: #fc0053;
+	width: 60px;
+	height: 5px;
+	margin-top: 80px;
+}
+
+.step.graph-scroll-active h2 {
+  opacity: 1;
+}
+/******************************************************
+ Footer
+*******************************************************/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+}
