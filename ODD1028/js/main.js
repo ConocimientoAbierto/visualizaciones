@@ -34,7 +34,8 @@ var y = d3.scaleLinear()
 var xAxis = d3.axisBottom(x)
 var yAxis = d3.axisLeft(y)
 
-d3.csv('../data/inscriptos.csv', function (error, csv) {
+var url = 'https://raw.githubusercontent.com/ConocimientoAbierto/visualizaciones/gh-pages/ODD1028/data/inscriptos.csv'
+d3.csv(url, function (error, csv) {
   if (error) throw error
 
   data = csv
