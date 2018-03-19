@@ -99,6 +99,7 @@ function init() {
 
     // Get the data
     var dataUrl = "https://conocimientoabierto.github.io/visualizaciones/sorteosJudiciales/data/sorteos.csv"
+    var dataUrl = './sorteos.csv'
     //var dataUrl = '../data/sorteos.csv'
     d3.csv(dataUrl, function(error, data) {
         // Catch the errors
